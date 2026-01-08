@@ -15,4 +15,34 @@ div.img {
 }
 main {
   display: inline-block;
+  padding: 61px 130px 0 70px;
+}
+
+.logo img,
+.logo span {
+  vertical-align: middle;
+}
+
+.logo .logo-text {
+  font-family: "Sacramento", cursive;
+  color: #8e6447;
+  font-size: 20px;
+  font-weight: 400;
+  margin-left: 15px;
+}
+
+h1.register {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #8e6447;
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 51px;
+  margin-bottom: 25px;
+}
+
+p.from-subtitle {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #4f5665;
+  font-size: 16px;
+  font-weight: 400;
 }
