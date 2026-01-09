@@ -83,6 +83,13 @@ img.icon-name {
   z-index: 2;
 }
 
+img.icon-name.eye-icon {
+  right: 13px;
+  left: auto;
+}
+
+/**/
+
 button.button {
   font-family: "Plus Jakarta Sans", sans-serif;
   display: block;
@@ -95,4 +102,18 @@ button.button {
   font-size: 16px;
   border-radius: 6px;
   border: none;
+}
+
+footer.footer {
+  text-align: center;
+  margin: 25px 0;
+  font-weight: 400;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  color: #4f5665;
+}
+
+footer.footer p a {
+  color: #ff8906;
+  text-decoration: none;
 }
