@@ -134,3 +134,21 @@ footer.footer p a {
   color: #ff8906;
   text-decoration: none;
 }
+
+div.or-line {
+  text-align: center;
+}
+
+div.line {
+  border-bottom: 0.5px solid #dedede;
+  display: inline-block;
+  width: 298.35px;
+  vertical-align: middle;
+}
+
+span.span-text {
+  display: inline-block;
+  vertical-align: middle;
+  color: #aaaaaa;
+  margin: 0 75px;
+}
