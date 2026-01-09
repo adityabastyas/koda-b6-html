@@ -162,8 +162,8 @@ div.container-icon {
 .container-facebook {
   margin-right: 14px;
 }
-div.container-facebook,
-div.container-google {
+a.container-facebook,
+a.container-google {
   display: inline-block;
   background-color: #ffffff;
   border-radius: 16px;
