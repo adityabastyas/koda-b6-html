@@ -83,9 +83,26 @@ img.icon-name {
   z-index: 2;
 }
 
-img.icon-name.eye-icon {
+img.icon-name.eye-icon,
+img.icon-name.eye-show-icon {
   right: 13px;
   left: auto;
+}
+
+.toggle {
+  display: none;
+}
+
+img.icon-name.eye-show-icon {
+  display: none;
+}
+
+.toggle:checked ~ label img.icon-name.eye-icon {
+  display: none;
+}
+
+.toggle:checked ~ label img.icon-name.eye-show-icon {
+  display: inline;
 }
 
 /**/
