@@ -11,12 +11,12 @@
 }
 
 div.img {
-  display: inline-block;
+  width: 460px;
+  float: left;
 }
 main {
-  display: block;
+  margin-left: 460px;
   padding: 61px 130px 0 70px;
-  background-color: antiquewhite;
 }
 
 .logo img,
@@ -87,9 +87,11 @@ img.icon-name.eye-icon,
 img.icon-name.eye-show-icon {
   right: 13px;
   left: auto;
+  cursor: pointer;
 }
 
-.toggle {
+.toggle,
+.toggle2 {
   display: none;
 }
 
@@ -97,15 +99,15 @@ img.icon-name.eye-show-icon {
   display: none;
 }
 
-.toggle:checked ~ label img.icon-name.eye-icon {
+.toggle:checked ~ label img.icon-name.eye-icon,
+.toggle2:checked ~ label img.icon-name.eye-icon {
   display: none;
 }
 
-.toggle:checked ~ label img.icon-name.eye-show-icon {
+.toggle:checked ~ label img.icon-name.eye-show-icon,
+.toggle2:checked ~ label img.icon-name.eye-show-icon {
   display: inline;
 }
-
-/**/
 
 button.button {
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -142,7 +144,7 @@ div.or-line {
 div.line {
   border-bottom: 0.5px solid #dedede;
   display: inline-block;
-  width: 298.35px;
+  width: 270px;
   vertical-align: middle;
 }
 
@@ -150,25 +152,33 @@ span.span-text {
   display: inline-block;
   vertical-align: middle;
   color: #aaaaaa;
-  margin: 0 75px;
+  margin: 0 60px;
 }
 
 div.container-icon {
   text-align: center;
+  margin-top: 25px;
 }
-
-div.container-facebook {
+.container-facebook {
+  margin-right: 14px;
+}
+div.container-facebook,
+div.container-google {
   display: inline-block;
   background-color: #ffffff;
   border-radius: 16px;
-  padding: 20px 125px;
+  padding: 20px 110px;
+  color: #4f5665;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08);
 }
 
-img.facebook-icon,
-span.facebook {
-  vertical-align: middle;
-}
-
-div.container-google {
+.facebook-icon,
+.facebook,
+.google-icon,
+.google {
   display: inline-block;
+  vertical-align: middle;
 }
