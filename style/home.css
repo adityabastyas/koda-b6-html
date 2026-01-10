@@ -85,19 +85,22 @@ img.cart-icon {
 /**/
 
 .background-cover {
-  width: 50.5%;
+  width: 50%;
   background: linear-gradient(to bottom, #777c82, #0b0909);
   height: 1024px;
   float: left;
   padding: 283px 80px 0 132px;
+  overflow: hidden;
 }
 
 .expresso-container {
-  width: 49.5%;
-  float: right;
+  width: 50%;
+  float: left;
+  height: 1024px;
+  overflow: hidden;
 }
 
-h1.hero-title {
+h.hero-title {
   color: #ffffff;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 500;
@@ -133,7 +136,7 @@ div.start {
   display: inline-block;
   margin-top: 25px;
   border-right: 1px solid #ffffff;
-  width: 130px;
+  width: 125px;
   margin-right: 35px;
 }
 
@@ -157,4 +160,90 @@ span.start-text {
   width: auto;
   border-right: none;
   margin-right: auto;
+}
+
+.provide-barista {
+  width: 100%;
+  position: relative;
+}
+section.content-left {
+  width: 50%;
+  background-color: wheat;
+  float: left;
+  padding: 54px 71px 0 130px;
+}
+
+h2.we {
+  color: #0b132a;
+  font-size: 48px;
+  font-weight: 500;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin-bottom: 25px;
+}
+
+span.we-provide {
+  color: #8e6447;
+}
+
+p.content-left-text {
+  color: #4f5665;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+li.benefit-list {
+  color: #4f5665;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+  list-style-type: none;
+  vertical-align: middle;
+  margin-top: 25px;
+}
+img.img-benefit {
+  vertical-align: middle;
+}
+
+section.content-right {
+  width: 50%;
+  float: right;
+  overflow: hidden;
+}
+
+/*--container favorite--*/
+
+section.container-favorite {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  padding: 80px 0;
+  clear: both;
+}
+
+h2.text-favorite {
+  color: #0b132a;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+}
+
+.text-favorite > span {
+  color: #8e6447;
+}
+
+.favorite-line {
+  width: 68px;
+  height: 7px;
+  background-color: #ff8906;
+  text-align: center;
+  margin: 25px auto;
+}
+
+p.favorite-paragraph {
+  font-weight: 400;
+  font-size: 16px;
+  color: #4f5665;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin-bottom: 60px;
 }
