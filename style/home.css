@@ -220,7 +220,6 @@ section.container-favorite {
   padding-top: 80px;
   margin-bottom: 84px;
   clear: both;
-  background-color: yellowgreen;
 }
 
 h2.text-favorite {
@@ -324,4 +323,38 @@ a.icon-cart-shopping {
 
 .icon-cart-shopping img {
   vertical-align: middle;
+}
+
+/*--location map--*/
+section.location {
+  text-align: center;
+  background-color: #e8e8e84d;
+  padding: 46px 0 97px 0;
+}
+
+h3.location-title {
+  color: #0b132a;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+}
+
+.location-title span {
+  color: #8e6447;
+}
+
+div.location-line {
+  width: 68px;
+  height: 7px;
+  background-color: #ff8906;
+  text-align: center;
+  margin: 25px auto;
+}
+
+p.location-text {
+  color: #4f5665;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 60px;
 }
