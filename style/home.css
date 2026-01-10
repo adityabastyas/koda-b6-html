@@ -9,6 +9,9 @@
 .container-header {
   background-color: #0b090921;
   padding: 14px 130px;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 div.logo {
