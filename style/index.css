@@ -448,12 +448,16 @@ img.arrow-right {
 
 /*--footer--*/
 
+.footer.footer {
+  background-color: #f8f8f8;
+  margin-top: 32px;
+}
 .coffee-logo {
   width: 340px;
-  margin-top: 92px;
   margin-left: 110px;
   display: inline-block;
   margin-right: 60px;
+  vertical-align: middle;
 }
 
 .nav-logo {
@@ -488,6 +492,7 @@ p.copy-coffe {
 nav.footer-nav {
   display: inline-block;
   margin-right: 106px;
+  margin-top: 50px;
 }
 
 h3.footer-heading {
@@ -515,6 +520,8 @@ h3.footer-heading {
 
 section.sosial-media {
   display: inline-block;
+  vertical-align: top;
+  margin-top: 50px;
 }
 
 h3.sosial-media-text {
