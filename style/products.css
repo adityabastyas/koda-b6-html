@@ -220,6 +220,7 @@ img.img-grup {
 section.products {
   margin-top: 25px;
   margin-left: 127px;
+  display: inline-block;
 }
 
 h2.product-title {
@@ -270,6 +271,7 @@ input.search-box {
   border: 4px solid #dedede;
   margin-top: 10px;
   margin-bottom: 16px;
+  width: 100%;
 }
 
 .sub-title {
@@ -288,4 +290,17 @@ input.corange-checkheckbox {
   color: #a0a3bd;
   border-radius: 8px;
   background: none;
+}
+
+.range-slider {
+  accent-color: #ff8906;
+}
+
+.apply-btn {
+  background-color: #ff8906;
+  color: #0b0909;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 12px 90px;
+  margin-top: 8px;
 }
