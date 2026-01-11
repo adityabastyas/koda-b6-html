@@ -7,11 +7,12 @@
 }
 
 .container-header {
-  background-color: #0b090921;
+  background-color: #0b0909;
   padding: 14px 130px;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
+  z-index: 10;
 }
 
 div.logo {
@@ -80,4 +81,24 @@ a.signin {
 
 img.cart-icon {
   margin-left: 22px;
+}
+
+/*background*/
+
+div.background-coffe {
+  width: 100%;
+  position: relative;
+  margin-bottom: 48px;
+}
+
+h1.background-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  color: #ffffff;
+  position: absolute;
+  z-index: 2;
+  top: 92px;
+  left: 130px;
+  width: 880px;
 }
