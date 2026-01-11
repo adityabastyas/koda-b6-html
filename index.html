@@ -31,7 +31,7 @@
         <ul>
           <li class="list">
             <a class="nav-a line" href="#">Home</a>
-            <a class="nav-a" href="">Product</a>
+            <a class="nav-a" href="./pages/products.html">Product</a>
           </li>
         </ul>
       </nav>
@@ -325,13 +325,13 @@
       </section>
 
       <section>
-        <div class="sticky">
-          <img src="./images/icon/ChatCircleDots.svg" alt="icon-chat" />
-        </div>
-
         <input type="checkbox" id="chat-toggle" />
 
-        <label for="chat-toggle" class="chat-float-button"></label>
+        <label for="chat-toggle" class="chat-float-button">
+          <div class="sticky">
+            <img src="./images/icon/ChatCircleDots.svg" alt="icon-chat" />
+          </div>
+        </label>
 
         <article class="chat-container">
           <header class="chat-header">
@@ -354,10 +354,16 @@
           </section>
 
           <footer class="chat-input">
-            <div class="input-wrapper">
-              <input type="text" placeholder="Masukan Pesan Anda" />
-              <button class="send-button"></button>
-            </div>
+            <form class="input-wrapper">
+              <input
+                type="text"
+                name="message"
+                placeholder="Masukan Pesan Anda"
+              />
+              <button type="submit" class="send-button">
+                <img src="./images/icon/send-one.svg" alt="" />
+              </button>
+            </form>
           </footer>
         </article>
       </section>

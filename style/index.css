@@ -12,6 +12,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 20;
 }
 
 div.logo {
@@ -165,7 +166,6 @@ span.start-text {
 }
 section.content-left {
   width: 50%;
-  background-color: wheat;
   float: left;
   padding: 54px 71px 0 130px;
 }
@@ -449,17 +449,128 @@ img.arrow-right {
 /*--section-chat--*/
 .sticky {
   position: fixed;
-  bottom: 100px;
-  right: 100px;
+  bottom: 60px;
+  right: 60px;
   z-index: 15;
   background-color: #ff8906;
   border-radius: 100%;
-  padding: 17px;
+  padding: 12px;
+  cursor: pointer;
 }
 
 .sticky img {
   width: 50px;
   height: 50px;
+}
+
+#chat-toggle {
+  display: none;
+}
+
+.chat-float-button {
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  cursor: pointer;
+  z-index: 20;
+  border-radius: 100%;
+}
+
+.chat-container {
+  width: 350px;
+  position: fixed;
+  bottom: 150px;
+  right: 60px;
+  background: white;
+  border-radius: 15px;
+  display: none;
+  z-index: 10;
+}
+
+#chat-toggle:checked ~ .chat-container {
+  display: block;
+}
+
+.chat-header {
+  background: #ff8906;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  border-radius: 15px 15px 0 0;
+}
+
+.chat-header h1 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.chat-header p {
+  font-size: 14px;
+}
+
+.chat-body {
+  padding: 20px;
+  height: 225px;
+  background: white;
+}
+
+.message {
+  margin-bottom: 15px;
+}
+
+.message-content {
+  background: white;
+  padding: 12px 15px;
+  border-radius: 10px;
+  width: 70%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message-content p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.message-user .message-content {
+  background: #e8e8e8;
+  margin-left: 30%;
+}
+
+.chat-input {
+  padding: 15px;
+  background: white;
+  border-radius: 0 0 15px 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.chat-input input {
+  width: 100%;
+  padding: 12px 50px 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  font-size: 14px;
+}
+
+.send-button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  background: #ff8906;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.send-button img {
+  width: 100%;
+  height: 100%;
 }
 
 /*--footer--*/
