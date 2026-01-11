@@ -119,7 +119,7 @@ header.promo-header {
   margin-bottom: 25px;
 }
 
-h1.promo-title {
+h2.promo-title {
   display: inline-block;
   margin-left: 127px;
   font-weight: 500;
@@ -213,4 +213,79 @@ img.happy-man {
 img.img-grup {
   margin-top: 30px;
   margin-left: 127px;
+}
+
+/*products*/
+
+section.products {
+  margin-top: 25px;
+  margin-left: 127px;
+}
+
+h2.product-title {
+  font-size: 48px;
+  font-weight: 500;
+  color: #0b0909;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin-bottom: 25px;
+}
+
+.product-title span {
+  color: #8e6447;
+}
+
+form.form-search {
+  padding: 25px 25px;
+  background-color: #0b0909;
+  display: inline-block;
+  color: white;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+h4.filter {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+button.reset-btn {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  background: none;
+  color: #ffffff;
+  margin-left: 100px;
+}
+
+h5.search {
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 16px;
+}
+
+input.search-box {
+  padding: 22px 19px;
+  border: 4px solid #dedede;
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+
+.sub-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+div.checkbox-item {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+input.corange-checkheckbox {
+  color: #a0a3bd;
+  border-radius: 8px;
+  background: none;
 }

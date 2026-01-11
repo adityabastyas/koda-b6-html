@@ -83,7 +83,7 @@
     <main>
       <section class="today-promo">
         <header class="promo-header">
-          <h1 class="promo-title">Today <span>Promo</span></h1>
+          <h2 class="promo-title">Today <span>Promo</span></h2>
           <nav class="navigation">
             <img
               src="../images/icon/arrow-left.svg"
@@ -140,6 +140,99 @@
           src="../images/icon/Group-1300.svg"
           alt="icon-group"
         />
+      </section>
+
+      <section class="products">
+        <h2 class="product-title">Our <span>Product</span></h2>
+
+        <section>
+          <form class="form-search">
+            <header>
+              <h4 class="filter">Filter</h4>
+              <button type="reset" class="reset-btn">Reset Filter</button>
+            </header>
+
+            <section>
+              <h5 class="search">Search</h5>
+              <input
+                type="text"
+                class="search-box"
+                placeholder="Search Your Product"
+              />
+            </section>
+
+            <section>
+              <h5 class="sub-title">Category</h5>
+              <div class="checkbox-item">
+                <input type="checkbox" id="fav" class="orange-check" />
+                <label for="fav">Favorite Product</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="coffee" class="orange-check" />
+                <label for="coffee">Coffee</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="noncoffee" class="orange-check" />
+                <label for="noncoffee">Non Coffee</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="foods" class="orange-check" />
+                <label for="foods">Foods</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="addon" class="orange-check" />
+                <label for="addon">Add-On</label>
+              </div>
+            </section>
+
+            <section>
+              <h5 class="sub-title">Sort by</h5>
+              <div class="checkbox-item">
+                <input type="checkbox" name="sort" id="buy1get1" />
+                <label for="buy1get1">Buy 1 get 1</label>
+              </div>
+              <div class="checkbox-item">
+                <input
+                  type="checkbox"
+                  name="sort"
+                  id="flashsale"
+                  class="orange-check"
+                />
+                <label for="flashsale">Flash sale</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="sort" id="birthday" />
+                <label for="birthday">Birthday Package</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" name="sort" id="cheap" />
+                <label for="cheap">Cheap</label>
+              </div>
+            </section>
+
+            <section>
+              <h5 class="sub-title">Range Price</h5>
+              <div class="range-container">
+                <input
+                  type="range"
+                  class="range-slider"
+                  min="0"
+                  max="100"
+                  value="50"
+                />
+                <div class="price-labels">
+                  <span class="min-price">idr 374</span>
+                  <span class="max-price">idr 500</span>
+                </div>
+              </div>
+            </section>
+
+            <button class="apply-btn">Apply Filter</button>
+          </form>
+          <section>
+            <span>hahahahaha</span>
+          </section>
+        </section>
       </section>
     </main>
 
