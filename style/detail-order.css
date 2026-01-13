@@ -105,9 +105,15 @@ main > span {
   display: block;
 }
 
+.container-info {
+  display: grid;
+  grid-template-areas: "info your-order";
+}
+
 .info {
   display: flex;
   flex-direction: column;
+  grid-area: info;
 }
 
 .info > h3 {
@@ -156,4 +162,70 @@ span.idr {
   font-size: 16px;
   font-weight: 700;
   color: #ff8906;
+}
+
+/*your order*/
+
+.your-order {
+  grid-area: your-order;
+}
+
+.your-order > h3 {
+  font-size: 22px;
+  color: #0b132a;
+  font-weight: 500;
+}
+
+.article-payment {
+  display: flex;
+  background-color: #e8e8e84d;
+  padding: 10px;
+  position: relative;
+  gap: 20px;
+}
+
+.article-payment > div > img {
+  width: 100%;
+  max-width: 180px;
+}
+
+.flash {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+}
+
+h4.flash-sale {
+  color: #ffffff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 24px;
+  background-color: #d00000;
+  display: inline-block;
+}
+
+h3.title-menu-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: #0b132a;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.idr-line {
+  color: #d00000;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+
+span.menu-price {
+  font-weight: 500;
+  font-size: 22px;
+  color: #ff8906;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
