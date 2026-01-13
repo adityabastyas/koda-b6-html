@@ -82,3 +82,109 @@ a.signin {
 img.cart-icon {
   margin-left: 22px;
 }
+
+/*payman detail*/
+
+.payment {
+  margin-top: 38px;
+  padding: 0 20px;
+}
+
+.payment > div {
+  margin-top: 31px;
+  margin-bottom: 16px;
+}
+
+.payment > div > span:nth-child(2) {
+  background-color: #ff8906;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.article-payment {
+  display: flex;
+  background-color: #e8e8e84d;
+  padding: 10px;
+}
+
+.article-payment > div > img {
+  width: 100%;
+}
+
+.flash {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+h4.flash-sale {
+  color: #ffffff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 24px;
+  background-color: #d00000;
+  display: inline-block;
+}
+
+h3.title-menu-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: #0b132a;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.idr-line {
+  color: #d00000;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+
+span.menu-price {
+  font-weight: 500;
+  font-size: 22px;
+  color: #ff8906;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/*Payment Info*/
+
+div.input-wrapper {
+  position: relative;
+}
+
+form .label {
+  display: block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #0b132a;
+  margin-top: 25px;
+}
+
+form .input {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  padding: 18.5px 0;
+  padding-left: 47px;
+  color: #4f5665;
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  background-color: #fcfdfe;
+  margin-top: 13px;
+  margin-bottom: 25px;
+}
+
+img.icon-name {
+  position: absolute;
+  top: 53px;
+  left: 13px;
+  z-index: 2;
+}
