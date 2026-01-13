@@ -98,6 +98,8 @@ img.cart-icon {
 .payment > div {
   margin-top: 31px;
   margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .payment > div > span:nth-child(2) {
@@ -112,16 +114,32 @@ img.cart-icon {
   display: flex;
   background-color: #e8e8e84d;
   padding: 10px;
+  position: relative;
+  gap: 20px;
+}
+
+.icon-x {
+  width: 24px;
+  height: 24px;
 }
 
 .article-payment > div > img {
   width: 100%;
+  max-width: 180px;
 }
 
 .flash {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  position: relative;
+}
+
+.flash > .icon-x {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  text-align: end;
 }
 h4.flash-sale {
   color: #ffffff;
