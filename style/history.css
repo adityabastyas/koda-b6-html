@@ -92,6 +92,7 @@ img.cart-icon {
 .container-history {
   display: flex;
   gap: 40px;
+  margin-bottom: 38px;
 }
 
 .tabs-container {
@@ -126,3 +127,55 @@ img.cart-icon {
 }
 
 /*order*/
+
+.menu-order {
+  display: flex;
+  gap: 21px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #e8e8e84d;
+  margin-bottom: 12px;
+  padding: 10px;
+}
+
+.menu-order img {
+  height: 100px;
+  width: 100px;
+}
+
+.container-order {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.order {
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+}
+
+.order > div > img {
+  width: 16px;
+  height: 16px;
+}
+
+.order > div > span {
+  color: #4f5665;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.order span {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.progress {
+  background-color: #ff890633;
+  color: #ff8906;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 24px;
+  padding: 10px;
+}
