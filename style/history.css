@@ -87,6 +87,22 @@ img.cart-icon {
 
 .main {
   font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 78px 130px 86px 130px;
+}
+.main > div {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 38px;
+}
+
+.main > div > span {
+  padding: 10px;
+  background-color: #e8e8e8;
+  color: #0b132a;
+}
+.container {
+  gap: 20px;
+  display: flex;
 }
 
 .container-history {
@@ -178,4 +194,41 @@ img.cart-icon {
   font-weight: 700;
   border-radius: 24px;
   padding: 10px;
+}
+
+/*send*/
+
+.send {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.send > img {
+  height: 48px;
+  width: 48px;
+}
+
+.send > h3 {
+  font-weight: 700;
+  color: #4f5665;
+  font-size: 18px;
+}
+
+.send > p {
+  font-size: 16px;
+  color: #4f5665;
+  font-weight: 400;
+}
+
+.send a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #0b132a;
+  background-color: #ff8906;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 6px;
 }
