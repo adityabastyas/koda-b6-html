@@ -202,4 +202,62 @@ img.icon-name {
 
 .button-delivery > button {
   padding: 10px;
+  cursor: pointer;
+}
+
+/*total*/
+
+.total {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin-top: 51px;
+  padding: 0 20px;
+}
+
+.total > h2 {
+  margin-bottom: 27px;
+}
+
+.total > article {
+  background-color: #e8e8e84d;
+  padding: 50px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.container-order {
+  display: flex;
+  justify-content: space-between;
+}
+
+span.order,
+span.price {
+  color: #4f5665;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+span.price {
+  color: #0b132a;
+}
+
+.history {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #ff8906;
+  padding: 10px 0;
+  color: #0b132a;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.we {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.bank {
+  display: flex;
+  justify-content: space-between;
 }
