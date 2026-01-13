@@ -261,3 +261,27 @@ span.price {
   display: flex;
   justify-content: space-between;
 }
+
+@media (min-width: 640px) {
+  .grid {
+    display: grid;
+    grid-template-areas:
+      "payment total"
+      "payment-info total";
+
+    padding: 0 100px;
+  }
+
+  .payment {
+    grid-area: payment;
+  }
+
+  .payment-info {
+    grid-area: payment-info;
+  }
+
+  .total {
+    grid-area: total;
+    padding-top: 50px;
+  }
+}
