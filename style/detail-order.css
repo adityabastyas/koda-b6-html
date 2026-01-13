@@ -82,3 +82,78 @@ a.signin {
 img.cart-icon {
   margin-left: 22px;
 }
+
+/*main*/
+
+main {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 78px 130px 57px 130px;
+}
+
+main h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #0b0909;
+}
+
+main > span {
+  color: #4f5665;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 27px;
+  display: block;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info > h3 {
+  color: #0b132a;
+  font-size: 22px;
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+.container-name {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e8e8e8;
+  padding: 20px 10px;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.container-name > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.container-name > div > span {
+  color: #4f5665;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.container-name > .done {
+  color: #0b132a;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.container-name > .oke {
+  color: #00a700;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px;
+  background-color: #00a70033;
+  border-radius: 24px;
+}
+
+span.idr {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ff8906;
+}
