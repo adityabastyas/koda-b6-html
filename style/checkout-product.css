@@ -262,6 +262,100 @@ span.price {
   justify-content: space-between;
 }
 
+/*Footer*/
+
+.footer.footer {
+  background-color: #f8f8f8;
+  margin-top: 32px;
+}
+.coffee-logo {
+  width: 340px;
+  margin-left: 110px;
+  display: inline-block;
+  margin-right: 60px;
+  vertical-align: middle;
+}
+
+.nav-logo {
+  text-decoration: none;
+}
+
+.logo-text-coffe {
+  font-family: "Sacramento", cursive;
+  color: #8e6447;
+  font-size: 20px;
+  font-weight: 400;
+  margin-left: 15px;
+}
+
+p.coffe-text {
+  color: #4f5665;
+  font-weight: 400;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  margin-top: 23px;
+  margin-bottom: 32px;
+}
+
+p.copy-coffe {
+  color: #afb5c0;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+  margin-bottom: 67.5px;
+}
+
+nav.footer-nav {
+  display: inline-block;
+  margin-right: 106px;
+  margin-top: 50px;
+}
+
+h3.footer-heading {
+  color: #0b132a;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin-bottom: 20px;
+}
+
+.footer-link {
+  list-style-type: none;
+}
+
+.footer-link li {
+  margin-bottom: 10px;
+}
+
+.footer-link li a {
+  text-decoration: none;
+  color: #4f5665;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+section.sosial-media {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 50px;
+}
+
+h3.sosial-media-text {
+  color: #0b132a;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin-bottom: 26px;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+.sosial-media-image {
+  margin: 0 20px;
+}
+
 @media (min-width: 640px) {
   .grid {
     display: grid;
@@ -270,6 +364,7 @@ span.price {
       "payment-info total";
 
     padding: 0 100px;
+    margin-bottom: 50px;
   }
 
   .payment {
