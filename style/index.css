@@ -298,14 +298,16 @@ button.menu-button {
   background-color: #ff8906;
   border: none;
   margin-right: 7px;
+  cursor: pointer;
 }
 
-.menu-button a {
+.menu-footer a {
   text-decoration: none;
   color: #0b132a;
   font-size: 14px;
   font-weight: 500;
   font-family: "Plus Jakarta Sans", sans-serif;
+  cursor: pointer;
 }
 
 .menu-button {
