@@ -85,6 +85,11 @@ img.cart-icon {
 
 /*payman detail*/
 
+.payment-info {
+  margin-top: 31px;
+  padding: 0 20px;
+}
+
 .payment {
   margin-top: 38px;
   padding: 0 20px;
@@ -187,4 +192,14 @@ img.icon-name {
   top: 53px;
   left: 13px;
   z-index: 2;
+}
+
+.button-delivery {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 13px;
+}
+
+.button-delivery > button {
+  padding: 10px;
 }
