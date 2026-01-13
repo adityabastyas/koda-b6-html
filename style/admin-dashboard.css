@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: grid;
+  grid-template-areas: "left right";
+  padding: 24px 80px 67px 42px;
+}
+
+.container-left {
+  grid-area: left;
+}
+
+.container-right {
+  grid-template-areas: right;
+  display: grid;
+  grid-template-areas:
+    "right1"
+    "right2"
+    "right3";
+}
+
+.right1 {
+  grid-area: right1;
+}
+.right2 {
+  grid-area: right2;
+}
+.right3 {
+  grid-area: right3;
+}
+
+/*navigation*/
+
+.container-left {
+  display: flex;
+  flex-direction: column;
+  background-color: #e8e8e8;
+}
+
+.container-left > nav {
+  gap: 16px;
+}
+
+.orange {
+  background-color: #ff8906;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #0b132a;
+}
+
+.navi {
+  font-size: 14px;
+  font-weight: 400;
+  color: #4f5665;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+}
+
+/*right 1*/
+
+.right1 {
+  background-color: greenyellow;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/*tabel*/
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  padding: 12px;
+}
+
+tbody td {
+  padding: 12px;
+}
+
+tbody .product-row:nth-child(2n + 1) {
+  background-color: #e8e8e84d;
+  padding: 26px;
+}
