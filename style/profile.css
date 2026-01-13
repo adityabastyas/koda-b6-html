@@ -82,3 +82,68 @@ a.signin {
 img.cart-icon {
   margin-left: 22px;
 }
+
+/*main*/
+
+main {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+main > h1 {
+  color: #0b0909;
+  font-size: 48px;
+  font-weight: 500;
+  padding: 78px 130px 50px 130px;
+}
+
+.container-profile {
+  display: grid;
+  grid-template-areas: "left right";
+}
+
+.left {
+  grid-area: left;
+  border: 1px solid #e8e8e8;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  align-items: center;
+}
+
+.left > h4 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #0b132a;
+}
+
+.left > span:nth-child(1) {
+  font-weight: 400;
+  font-size: 16px;
+  color: #4f5665;
+}
+
+.left img {
+  border-radius: 100%;
+  width: 110px;
+  height: 100px;
+}
+
+.left > button {
+  font-size: 14px;
+  font-weight: 500px;
+  color: #0b132a;
+  background-color: #ff8906;
+  border-radius: 5px;
+  border: none;
+  padding: 12px 48px;
+}
+.left > span:nth-child(2) {
+  color: #4f5665;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.right {
+  grid-area: right;
+}
