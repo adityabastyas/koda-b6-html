@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-header {
+  background-color: #0b0909;
+  padding: 14px 130px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+div.logo {
+  display: inline-block;
+}
+
+.logo img,
+.logo span {
+  vertical-align: middle;
+}
+
+.logo .logo-text {
+  font-family: "Sacramento", cursive;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400;
+  margin-left: 15px;
+}
+
+nav.nav-container-left {
+  display: inline-block;
+}
+ul .list {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+a.nav-a {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.line {
+  margin: 0 60px 0 68px;
+  border-bottom: 1px solid #ff8906;
+  padding-bottom: 5px;
+}
+
+.nav-container-right {
+  float: right;
+}
+
+a.signin,
+a.signup {
+  text-decoration: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+a.signup {
+  background-color: #ff8906;
+  color: #0b132a;
+}
+
+a.signin {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  margin: 0 22px;
+}
+
+img.cart-icon {
+  margin-left: 22px;
+}
