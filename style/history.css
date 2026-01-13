@@ -91,7 +91,7 @@ img.cart-icon {
 }
 .main > div {
   display: flex;
-  gap: 28px;
+  gap: 20px;
   margin-bottom: 38px;
 }
 
@@ -146,11 +146,10 @@ img.cart-icon {
 
 .menu-order {
   display: flex;
-  gap: 21px;
+  gap: 10px;
   font-family: "Plus Jakarta Sans", sans-serif;
   background-color: #e8e8e84d;
   margin-bottom: 12px;
-  padding: 10px;
 }
 
 .menu-order img {
@@ -167,7 +166,7 @@ img.cart-icon {
   gap: 8px;
   display: flex;
   flex-direction: column;
-  padding-right: 20px;
+  padding-right: 10px;
 }
 
 .order > div > img {
@@ -203,6 +202,10 @@ img.cart-icon {
   display: flex;
   flex-direction: column;
   gap: 9px;
+  max-width: 450px;
+  background-color: #e8e8e8;
+  max-height: 230px;
+  padding: 20px;
 }
 
 .send > img {
@@ -231,4 +234,39 @@ img.cart-icon {
   padding: 10px;
   text-decoration: none;
   border-radius: 6px;
+}
+
+/*number 1-4*/
+
+.stepper {
+  text-align: center;
+  cursor: pointer;
+}
+span.step,
+.next {
+  display: inline-block;
+  background-color: #e8e8e8;
+  border-radius: 100%;
+  color: #a0a3bd;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 20px;
+  vertical-align: middle;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+}
+
+span.step.active {
+  color: #0b0909;
+  background-color: #ff8906;
+}
+
+span.next {
+  background-color: #ff8906;
+}
+
+.next img {
+  padding-top: 11px;
 }
