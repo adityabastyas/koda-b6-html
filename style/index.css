@@ -249,6 +249,7 @@ p.favorite-paragraph {
 article.menu {
   display: inline-block;
   margin-right: 20px;
+  height: 100%;
 }
 
 header.header-menu {

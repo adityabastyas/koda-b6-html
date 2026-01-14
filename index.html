@@ -162,8 +162,8 @@
           yours too!
         </p>
 
-        <section>
-          <article class="menu">
+        <section id="menu">
+          <!-- <article class="menu">
             <header class="header-menu">
               <img src="./images/image 27.png" alt="image-27" />
             </header>
@@ -258,7 +258,7 @@
                 </a>
               </footer>
             </div>
-          </article>
+          </article> -->
         </section>
       </section>
 
@@ -419,5 +419,87 @@
         /></a>
       </section>
     </footer>
+
+    <script>
+      const product = [
+        {
+          image: "./images/image 27.png",
+          alt: "item 27",
+          title: "Hazelnut Latte",
+          description: `You can explore the menu   that we provide with fun and have their
+          own taste and make your day better.`,
+          price: "IDR 20.000",
+        },
+        {
+          image: "./images/image 22.png",
+          alt: "item 22",
+          title: "Expresso",
+          description: `You can explore the menu   expresso with barista provesional`,
+          price: "IDR 40.000",
+        },
+      ];
+
+      product.forEach((product) => {
+        const article = document.createElement("article");
+        article.className = "menu";
+
+        const header = document.createElement("header");
+        header.className = "header-menu";
+        const img = document.createElement("img");
+        img.src = product.image;
+        img.alt = product.alt;
+
+        header.append(img);
+
+        article.appendChild(header);
+
+        const titleMenu = document.createElement("div");
+        titleMenu.className = "title-menu";
+
+        const h3 = document.createElement("h3");
+        h3.className = "title-menu-title";
+        h3.textContent = "Hazelnut Latte";
+        titleMenu.appendChild(h3);
+
+        const p = document.createElement("p");
+        p.className = "title-menu-text";
+        p.textContent = product.description;
+        titleMenu.appendChild(p);
+
+        const menuPrice = document.createElement("span");
+        menuPrice.className = "menu-price";
+        menuPrice.textContent = product.price;
+        titleMenu.appendChild(menuPrice);
+
+        const footer = document.createElement("footer");
+        footer.className = "menu-footer";
+
+        const aBuy = document.createElement("a");
+        aBuy.href = "./pages/products-detail.html";
+        const menuButton = document.createElement("button");
+        menuButton.className = "menu-button";
+        menuButton.textContent = "Buy";
+        aBuy.appendChild(menuButton);
+        footer.appendChild(aBuy);
+
+        const iconCart = document.createElement("a");
+        iconCart.href = "./pages/history.html";
+        iconCart.className = "icon-cart-shopping";
+
+        const imgCart = document.createElement("img");
+        imgCart.src = "./images/icon/ShoppingCart.svg";
+        imgCart.alt = "icon-cart-shopping";
+
+        iconCart.appendChild(imgCart);
+        footer.appendChild(iconCart);
+
+        titleMenu.appendChild(footer);
+
+        article.appendChild(titleMenu);
+
+        const section = document.getElementById("menu");
+        section.append(article);
+      });
+    </script>
   </body>
 </html>
