@@ -384,6 +384,11 @@ span.menu-price {
   margin-top: 12px;
 }
 
+.container-button {
+  display: flex;
+  justify-content: space-between;
+}
+
 button.menu-button {
   padding: 7.5px 70.5px;
   border-radius: 6px;
@@ -407,7 +412,7 @@ button.menu-button {
 a.icon-cart-shopping {
   border: 1px solid #ff8906;
   border-radius: 6px;
-  padding: 7.5px 17px;
+  padding: 7.5px 70.5px;
 }
 
 .icon-cart-shopping img {

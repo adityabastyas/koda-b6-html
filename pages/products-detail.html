@@ -94,7 +94,7 @@
           <span>200+ Review</span>
           <span>|</span>
           <span> Recommendation </span>
-          <img src="../images/icon/ThumbsUp.svg" alt="-con-like" />
+          <img src="../images/icon/ThumbsUp.svg" alt="icon-like" />
         </div>
 
         <p class="title-menu-text">
@@ -120,12 +120,17 @@
           <span>Hot</span>
         </div>
 
-        <button class="menu-button">
-          <a href="./checkout-product.html">Buy</a>
-        </button>
-        <a class="icon-cart-shopping" href="./history.html">
-          <img src="../images/icon/ShoppingCart.svg" alt="icon-cart-shopping" />
-        </a>
+        <div class="container-button">
+          <button class="menu-button">
+            <a href="./checkout-product.html">Buy</a>
+          </button>
+          <a class="icon-cart-shopping" href="./history.html">
+            <img
+              src="../images/icon/ShoppingCart.svg"
+              alt="icon-cart-shopping"
+            />
+          </a>
+        </div>
       </article>
     </section>
 
@@ -350,5 +355,206 @@
         /></a>
       </section>
     </footer>
+
+    <script>
+      const product = [
+        {
+          id: 1,
+          image: {
+            imageSatu: "../images/image 31.png",
+            imageDua: "../images/image 31.png",
+            imageTiga: "../images/image 31.png",
+            imageEmpat: "../images/image 31.png",
+          },
+        },
+      ];
+
+      const imageCoffe = document.createElement("div");
+      imageCoffe.className = "image-coffe";
+      const imgSatu = document.createElement("img");
+      imgSatu.src = "../images/image 31.png";
+      imgSatu.alt = "coffee";
+      imageCoffe.appendChild(imgSatu);
+
+      const containerChildImage = document.createElement("div");
+      const imgDua = document.createElement("img");
+      imgDua.src = "../images/image 32.png";
+      imgDua.alt = "copee";
+      const imgTiga = document.createElement("img");
+      imgTiga.src = "../images/image 33.png";
+      imgTiga.alt = "copee";
+      const imgEmpat = document.createElement("img");
+      imgEmpat.src = "../images/image 34.png";
+      imgEmpat.alt = "copee";
+
+      containerChildImage.append(imgDua, imgTiga, imgEmpat);
+
+      const article = document.createElement("article");
+      article.className = "article-flash";
+
+      const cFlash = document.createElement("div");
+      const flashSale = document.createElement("span");
+      flashSale.className = "flash-sale";
+      flashSale.textContent = "FLASH SALE!";
+      cFlash.appendChild(flashSale);
+      article.appendChild(cFlash);
+
+      const titleMenuTitle = document.createElement("h3");
+      titleMenuTitle.className = "title-menu-title";
+      titleMenuTitle.textContent = "Hazelnut Latte";
+      article.appendChild(titleMenuTitle);
+
+      const idrLine = document.createElement("span");
+      idrLine.className = "idr-line";
+      idrLine.textContent = "IDR 20.000";
+      article.appendChild(idrLine);
+
+      const menuPrice = document.createElement("span");
+      menuPrice.className = "menu-price";
+      menuPrice.textContent = "IDR 10.000";
+      article.appendChild(menuPrice);
+
+      const rating = document.createElement("div");
+      rating.className = "rating";
+      article.appendChild(rating);
+
+      const startSatu = document.createElement("img");
+      startSatu.src = "../images/icon/start.svg";
+      startSatu.alt = "icon-start";
+      startSatu.className = "start";
+      rating.appendChild(startSatu);
+
+      const starDua = document.createElement("img");
+      starDua.src = "../images/icon/start.svg";
+      starDua.alt = "icon-start";
+      starDua.className = "start";
+      rating.appendChild(starDua);
+
+      const starTiga = document.createElement("img");
+      starTiga.src = "../images/icon/start.svg";
+      starTiga.alt = "icon-start";
+      starTiga.className = "start";
+      rating.appendChild(starTiga);
+
+      const startEmpat = document.createElement("img");
+      startEmpat.src = "../images/icon/start.svg";
+      startEmpat.alt = "icon-start";
+      startEmpat.className = "start";
+      rating.appendChild(startEmpat);
+
+      const startLima = document.createElement("img");
+      startLima.src = "../images/icon/start.svg";
+      startLima.alt = "icon-start";
+      startLima.className = "start";
+      rating.appendChild(startLima);
+
+      const ratingNumber = document.createElement("span");
+      ratingNumber.className = "rating-number";
+      ratingNumber.textContent = "5.0";
+      rating.appendChild(ratingNumber);
+      article.appendChild(rating);
+
+      const review = document.createElement("div");
+      review.className = "review";
+      const reviwDua = document.createElement("span");
+      reviwDua.textContent = "200+ Review";
+      review.appendChild(reviwDua);
+
+      const reviewLine = document.createElement("span");
+      reviewLine.textContent = "|";
+      review.appendChild(reviewLine);
+
+      const reviewReco = document.createElement("span");
+      reviewReco.textContent = "Recommendation";
+      review.appendChild(reviewReco);
+
+      const imgLike = document.createElement("img");
+      imgLike.src = "../images/icon/ThumbsUp.svg";
+      imgLike.alt = "icon-like";
+      review.appendChild(imgLike);
+      article.appendChild(review);
+
+      const titleMenuText = document.createElement("p");
+      titleMenuText.className = "title-menu-text";
+      titleMenuText.textContent = `Cold brewing is a method of brewing that combines ground coffee and
+      cool water and uses time instead of heat to extract the flavor. It is
+      brewed in small batches and steeped for as long as 48 hours.`;
+      article.appendChild(titleMenuText);
+
+      const plusMinus = document.createElement("div");
+      plusMinus.className = "plus-minus";
+      const minus = document.createElement("button");
+      minus.textContent = "-";
+      plusMinus.appendChild(minus);
+
+      const satu = document.createElement("span");
+      satu.textContent = "1";
+      plusMinus.appendChild(satu);
+
+      const plus = document.createElement("button");
+      plus.textContent = "+";
+      plusMinus.appendChild(plus);
+      article.appendChild(plusMinus);
+
+      const choose = document.createElement("h4");
+      choose.textContent = "Choose Size";
+      article.appendChild(choose);
+
+      const regular = document.createElement("div");
+      regular.className = "regular";
+      const reguSpan = document.createElement("span");
+      reguSpan.textContent = "Regular";
+      regular.appendChild(reguSpan);
+
+      const medium = document.createElement("span");
+      medium.textContent = "Medium";
+      regular.appendChild(medium);
+
+      const large = document.createElement("span");
+      large.textContent = "Large";
+      regular.appendChild(large);
+      article.appendChild(regular);
+
+      const choose2 = document.createElement("h4");
+      choose2.className = "choose";
+      choose2.textContent = "Hot/Ice?";
+      article.appendChild(choose2);
+
+      const regular2 = document.createElement("div");
+      regular2.className = "regular";
+      const ice = document.createElement("span");
+      ice.textContent = "Ice";
+      regular2.appendChild(ice);
+
+      const hot = document.createElement("span");
+      hot.textContent = "Hot";
+      regular2.appendChild(hot);
+      article.appendChild(regular2);
+
+      const containerButton = document.createElement("div");
+      containerButton.className = "container-button";
+      const menuButton = document.createElement("button");
+      menuButton.className = "menu-button";
+      const aBuy = document.createElement("a");
+      aBuy.href = "./checkout-product.html";
+      aBuy.textContent = "Buy";
+      menuButton.appendChild(aBuy);
+      containerButton.appendChild(menuButton);
+
+      const iconCartShopping = document.createElement("a");
+      iconCartShopping.href = "./history.html";
+      iconCartShopping.className = "icon-cart-shopping";
+      const imgCart = document.createElement("img");
+      imgCart.src = "../images/icon/ShoppingCart.svg";
+      imgCart.alt = "icon-cart-shopping";
+      iconCartShopping.appendChild(imgCart);
+      containerButton.appendChild(iconCartShopping);
+
+      article.appendChild(containerButton);
+      imageCoffe.appendChild(containerChildImage);
+
+      const containerDetail = document.querySelector(".container-detail");
+      containerDetail.append(imageCoffe, article);
+    </script>
   </body>
 </html>
