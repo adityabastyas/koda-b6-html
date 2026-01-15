@@ -423,6 +423,7 @@
     <script>
       const product = [
         {
+          id: 1,
           image: "./images/image 27.png",
           alt: "item 27",
           title: "Hazelnut Latte",
@@ -431,6 +432,7 @@
           price: "IDR 20.000",
         },
         {
+          id: 2,
           image: "./images/image 22.png",
           alt: "item 22",
           title: "Expresso",
@@ -483,7 +485,7 @@
         footer.appendChild(aBuy);
 
         const iconCart = document.createElement("a");
-        iconCart.href = "./pages/history.html";
+        iconCart.href = `./pages/history.html${product.id}`;
         iconCart.className = "icon-cart-shopping";
 
         const imgCart = document.createElement("img");
