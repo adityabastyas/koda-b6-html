@@ -477,7 +477,7 @@
         footer.className = "menu-footer";
 
         const aBuy = document.createElement("a");
-        aBuy.href = "./pages/products-detail.html";
+        aBuy.href = `./pages/products-detail.html?id=${product.id}`;
         const menuButton = document.createElement("button");
         menuButton.className = "menu-button";
         menuButton.textContent = "Buy";
@@ -485,7 +485,7 @@
         footer.appendChild(aBuy);
 
         const iconCart = document.createElement("a");
-        iconCart.href = `./pages/history.html${product.id}`;
+        iconCart.href = `./pages/history.html`;
         iconCart.className = "icon-cart-shopping";
 
         const imgCart = document.createElement("img");
