@@ -361,13 +361,16 @@
         {
           id: 1,
           image: {
-            imageSatu: "../images/image 31.png",
-            imageDua: "../images/image 31.png",
-            imageTiga: "../images/image 31.png",
-            imageEmpat: "../images/image 31.png",
+            imageSatu: "../images/image 27.png",
+            imageDua: "../images/image 27.png",
+            imageTiga: "../images/image 27.png",
+            imageEmpat: "../images/image 27.png",
           },
         },
       ];
+
+      const url = new URLSearchParams(window.location.search);
+      const selectId = queryString.get("id");
 
       const imageCoffe = document.createElement("div");
       imageCoffe.className = "image-coffe";
