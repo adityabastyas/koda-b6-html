@@ -11,12 +11,10 @@
 }
 
 div.img {
-  width: 460px;
-  float: left;
+  display: none;
 }
 main {
-  margin-left: 460px;
-  padding: 185px 130px 0 70px;
+  padding: 117px 20px;
 }
 
 .logo img,
@@ -154,7 +152,7 @@ div.or-line {
 div.line {
   border-bottom: 0.5px solid #dedede;
   display: inline-block;
-  width: 270px;
+  width: 130px;
   vertical-align: middle;
 }
 
@@ -177,7 +175,7 @@ a.container-google {
   display: inline-block;
   background-color: #ffffff;
   border-radius: 16px;
-  padding: 20px 110px;
+  padding: 20px;
   color: #4f5665;
   font-weight: 500;
   font-size: 18px;
@@ -186,9 +184,73 @@ a.container-google {
 }
 
 .facebook-icon,
-.facebook,
-.google-icon,
-.google {
+.google-icon {
   display: inline-block;
   vertical-align: middle;
+}
+
+.facebook,
+.google {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .container {
+    display: grid;
+    grid-template-areas: "img main";
+    grid-template-columns: 1fr 1fr;
+  }
+  div.img {
+    display: block;
+    grid-area: img;
+  }
+  main {
+    padding: 61px 100px 0 70px;
+    grid-area: main;
+  }
+  a.container-facebook,
+  a.container-google {
+    padding: 20px 110px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .container-icon {
+    display: flex;
+  }
+
+  .facebook,
+  .google {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-areas: "img main";
+    grid-template-columns: 1fr 1fr;
+  }
+  div.img {
+    display: block;
+    grid-area: img;
+  }
+  main {
+    padding: 61px 130px 0 70px;
+    grid-area: main;
+  }
+  a.container-facebook,
+  a.container-google {
+    padding: 20px 110px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .container-icon {
+    display: flex;
+  }
+
+  .facebook,
+  .google {
+    display: block;
+  }
 }
