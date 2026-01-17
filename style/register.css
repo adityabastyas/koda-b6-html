@@ -200,6 +200,10 @@ a.container-google {
     padding: 61px 100px 0 70px;
     grid-area: main;
   }
+
+  .container-icon a {
+    text-decoration: none;
+  }
   a.container-facebook,
   a.container-google {
     padding: 20px 110px;

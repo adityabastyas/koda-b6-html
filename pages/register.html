@@ -173,5 +173,78 @@
         </div>
       </main>
     </div>
+
+    <script>
+      const form = document.querySelector("form");
+      const inputName = document.getElementById("name");
+      const inputEmail = document.getElementById("email");
+      const inputPassword = document.getElementById("password");
+      const confirmPassword = document.getElementById("confirm-password");
+      const toggle = document.getElementById("toggle");
+      const toggle2 = document.getElementById("toggle2");
+
+      toggle.addEventListener("change", (e) => {
+        if (e.target.checked) {
+          inputPassword.type = "text";
+        } else {
+          inputPassword.type = "password";
+        }
+      });
+
+      toggle2.addEventListener("change", (e) => {
+        if (e.target.checked) {
+          confirmPassword.type = "text";
+        } else {
+          confirmPassword.type = "password";
+        }
+      });
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = inputName.value.trim();
+        const email = inputEmail.value.trim();
+        const password = inputPassword.value.trim();
+        const confirm = confirmPassword.value.trim();
+
+        const labelNama = form.querySelector(".input-wrapper:nth-child(1)");
+        labelNama.querySelector("span")?.remove();
+        if (name === "") {
+          const spanNama = document.createElement("span");
+          spanNama.style.color = "red";
+          spanNama.textContent = "nama tidak boleh kosong";
+          return labelNama.appendChild(spanNama);
+        }
+
+        const labelEmail = form.querySelector(".input-wrapper:nth-child(2)");
+        labelEmail.querySelector("span")?.remove();
+        if (email === "") {
+          const spanEmail = document.createElement("span");
+          spanEmail.style.color = "red";
+          spanEmail.textContent = "email tidak boleh kosong";
+          return labelEmail.appendChild(spanEmail);
+        }
+
+        const labelPassword = form.querySelector(".input-wrapper:nth-child(3)");
+        labelPassword.querySelector("span")?.remove();
+        if (password === "") {
+          const spanPassword = document.createElement("span");
+          spanPassword.style.color = "red";
+          spanPassword.textContent = "password tidak boleh kosong";
+          return labelPassword.appendChild(spanPassword);
+        }
+
+        const labelConfirm = form.querySelector(".input-wrapper:nth-child(4)");
+        labelConfirm.querySelector("span")?.remove();
+        if (confirm !== password) {
+          const spanConfirm = document.createElement("span");
+          spanConfirm.style.color = "red";
+          spanConfirm.textContent = "confirm password tidak sama";
+          return labelConfirm.appendChild(spanConfirm);
+        }
+
+        window.location.href = "./login.html";
+      });
+    </script>
   </body>
 </html>
