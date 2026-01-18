@@ -57,10 +57,10 @@
             </a>
           </li>
           <li class="list">
-            <a class="signin" href="./login.html">Signin</a>
+            <a class="signin" href="./pages/login.html">Signin</a>
           </li>
           <li class="list">
-            <a class="signup" href="./register.html">Sign up</a>
+            <a class="signup" href="./pages/register.html">Sign up</a>
           </li>
         </ul>
       </nav>
@@ -279,7 +279,7 @@
       </section>
 
       <section class="testimonial">
-        <figure class="testimonial-man">
+        <!-- <figure class="testimonial-man">
           <img src="./images/testimonial-man.png" alt="testimonial man" />
         </figure>
         <article class="testimonial-article">
@@ -320,8 +320,17 @@
 
           <div>
             <img src="./images/icon/Group-1300.svg" alt="Group-1300" />
+
+            
           </div>
-        </article>
+        </article> -->
+
+        <div>
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="two"></span>
+          <span class="two"></span>
+        </div>
       </section>
 
       <section>
@@ -520,6 +529,95 @@
         const section = document.getElementById("menu");
         section.append(article);
       });
+
+      // testimonial
+      const testimonial = document.querySelector(".testimonial");
+      const figure = document.createElement("figure");
+      figure.className = "testimonial-man";
+      const imgMan = document.createElement("img");
+      imgMan.alt = "testimonial man";
+      imgMan.src = "./images/testimonial-man.png";
+      figure.appendChild(imgMan);
+
+      const articleTesti = document.createElement("article");
+      articleTesti.className = "testimonial-article";
+      const spanTestiLabel = document.createElement("span");
+      spanTestiLabel.className = "testimonial-label";
+      spanTestiLabel.textContent = "Testimonial";
+      articleTesti.appendChild(spanTestiLabel);
+
+      const customerName = document.createElement("h2");
+      customerName.className = "customer-name";
+      customerName.textContent = "Viezh Robert";
+      articleTesti.appendChild(customerName);
+
+      const customerRole = document.createElement("span");
+      customerRole.className = "customer-role";
+      customerRole.textContent = "Manager Coffee Shop";
+      articleTesti.appendChild(customerRole);
+
+      const testimonialText = document.createElement("p");
+      testimonialText.className = "testimonial-text";
+      testimonialText.textContent = `“Wow... I am very happy to spend my whole day here. the Wi-fi is good, and the coffee and meals tho. I like it here!! Very recommended!`;
+      articleTesti.appendChild(testimonialText);
+
+      const rating = document.createElement("div");
+      rating.className = "rating";
+      const start1 = document.createElement("img");
+      start1.src = "./images/icon/start.svg";
+      start1.alt = "icon-start";
+      start1.className = "start";
+      const start2 = document.createElement("img");
+      start2.src = "./images/icon/start.svg";
+      start2.className = "start";
+
+      const start3 = document.createElement("img");
+      start3.src = "./images/icon/start.svg";
+      start3.className = "start";
+
+      const start4 = document.createElement("img");
+      start4.src = "./images/icon/start.svg";
+      start4.className = "start";
+
+      const start5 = document.createElement("img");
+      start5.src = "./images/icon/start.svg";
+      start5.className = "start";
+
+      rating.appendChild(start1);
+      rating.appendChild(start2);
+      rating.appendChild(start3);
+      rating.appendChild(start4);
+      rating.appendChild(start5);
+
+      const ratingNumber = document.createElement("span");
+      ratingNumber.className = "rating-number";
+      ratingNumber.className = "5.0";
+      rating.appendChild(ratingNumber);
+
+      articleTesti.appendChild(rating);
+
+      const navigation = document.createElement("nav");
+      navigation.className = "navigation";
+      const arrowLeft = document.createElement("img");
+      arrowLeft.src = "./images/icon/arrow-left.svg";
+      arrowLeft.className = "arrow-left";
+      navigation.appendChild(arrowLeft);
+
+      const arrowRight = document.createElement("img");
+      arrowRight.className = "arrow-right";
+      arrowRight.src = "./images/icon/arrow-right.svg";
+      navigation.appendChild(arrowRight);
+      articleTesti.appendChild(navigation);
+
+      const grup13 = document.createElement("div");
+      // const group1300 = document.createElement("img");
+      // group1300.src = "./images/icon/Group-1300.svg";
+      // grup13.appendChild(group1300);
+      const cir1 = document.createElement("span");
+      articleTesti.appendChild(grup13);
+
+      testimonial.appendChild(figure);
+      testimonial.appendChild(articleTesti);
     </script>
   </body>
 </html>
