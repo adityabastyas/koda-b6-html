@@ -317,20 +317,16 @@
               class="arrow-right"
             />
           </nav>
-
-          <div>
-            <img src="./images/icon/Group-1300.svg" alt="Group-1300" />
-
-            
+          
+          <div class="conNav">
+            <span class="one"></span>
+            <span class="two"></span>
+            <span class="two"></span>
+            <span class="two"></span>
           </div>
+            
+          
         </article> -->
-
-        <div>
-          <span class="one"></span>
-          <span class="two"></span>
-          <span class="two"></span>
-          <span class="two"></span>
-        </div>
       </section>
 
       <section>
@@ -531,12 +527,54 @@
       });
 
       // testimonial
+
+      const testimoni = [
+        {
+          img: "./images/testimonial-man.png",
+          name: "Viezh Robert",
+          role: "Manager Coffee Shop",
+          text: `Wow... I am very happy to spend my whole day here. the Wi-fi is
+        good, and the coffee and meals tho. I like it here!! Very
+        recommended!`,
+          rating: "5.0",
+        },
+        {
+          img: "./images/dom.jpg",
+          name: "Dominic Toretto",
+          role: "Manager Fast Forius",
+          text: `Wow... I am very happy to spend my whole day here. the Wi-fi is
+        good, and the coffee and meals tho. I like it here!! Very
+        recommended!`,
+          rating: "5.0",
+        },
+        {
+          img: "./images/toni.jpeg",
+          name: "Tony Stark",
+          role: "Manager Avanger End Game",
+          text: `Wow... I am very happy to spend my whole day here. the Wi-fi is
+        good, and the coffee and meals tho. I like it here!! Very
+        recommended!`,
+          rating: "5.0",
+        },
+        {
+          img: "./images/captain.jpg",
+          name: "Steve Rogers",
+          role: "Manager Captain America",
+          text: `Wow... I am very happy to spend my whole day here. the Wi-fi is
+        good, and the coffee and meals tho. I like it here!! Very
+        recommended!`,
+          rating: "5.0",
+        },
+      ];
+
+      const item = testimoni[0];
+
       const testimonial = document.querySelector(".testimonial");
       const figure = document.createElement("figure");
       figure.className = "testimonial-man";
       const imgMan = document.createElement("img");
-      imgMan.alt = "testimonial man";
-      imgMan.src = "./images/testimonial-man.png";
+      imgMan.alt = item.name;
+      imgMan.src = item.img;
       figure.appendChild(imgMan);
 
       const articleTesti = document.createElement("article");
@@ -548,17 +586,17 @@
 
       const customerName = document.createElement("h2");
       customerName.className = "customer-name";
-      customerName.textContent = "Viezh Robert";
+      customerName.textContent = item.name;
       articleTesti.appendChild(customerName);
 
       const customerRole = document.createElement("span");
       customerRole.className = "customer-role";
-      customerRole.textContent = "Manager Coffee Shop";
+      customerRole.textContent = item.role;
       articleTesti.appendChild(customerRole);
 
       const testimonialText = document.createElement("p");
       testimonialText.className = "testimonial-text";
-      testimonialText.textContent = `“Wow... I am very happy to spend my whole day here. the Wi-fi is good, and the coffee and meals tho. I like it here!! Very recommended!`;
+      testimonialText.textContent = item.text;
       articleTesti.appendChild(testimonialText);
 
       const rating = document.createElement("div");
@@ -591,7 +629,7 @@
 
       const ratingNumber = document.createElement("span");
       ratingNumber.className = "rating-number";
-      ratingNumber.className = "5.0";
+      ratingNumber.className = item.rating;
       rating.appendChild(ratingNumber);
 
       articleTesti.appendChild(rating);
@@ -609,15 +647,49 @@
       navigation.appendChild(arrowRight);
       articleTesti.appendChild(navigation);
 
-      const grup13 = document.createElement("div");
-      // const group1300 = document.createElement("img");
-      // group1300.src = "./images/icon/Group-1300.svg";
-      // grup13.appendChild(group1300);
-      const cir1 = document.createElement("span");
-      articleTesti.appendChild(grup13);
+      const conNav = document.createElement("div");
+      conNav.className = "conNav";
+      const one = document.createElement("span");
+      one.className = "one";
+      const two1 = document.createElement("span");
+      two1.className = "two";
+      const two2 = document.createElement("span");
+      two2.className = "two";
+      const two3 = document.createElement("span");
+      two3.className = "two";
+      conNav.append(one, two1, two2, two3);
+      articleTesti.appendChild(conNav);
 
       testimonial.appendChild(figure);
       testimonial.appendChild(articleTesti);
+
+      let now = 0;
+
+      arrowLeft.addEventListener("click", () => {
+        now--;
+
+        if (now < 0) {
+          now = 3;
+        }
+
+        imgMan.src = testimoni[now].img;
+        customerName.textContent = testimoni[now].name;
+        customerRole.textContent = testimoni[now].role;
+        testimonialText.textContent = testimoni[now].text;
+      });
+
+      arrowRight.addEventListener("click", () => {
+        now++;
+
+        if (now > 3) {
+          now = 0;
+        }
+
+        imgMan.src = testimoni[now].img;
+        customerName.textContent = testimoni[now].name;
+        customerRole.textContent = testimoni[now].role;
+        testimonialText.textContent = testimoni[now].text;
+      });
     </script>
   </body>
 </html>
