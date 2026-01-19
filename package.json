@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/adityabastyas/koda-b6-html/issues"
   },
-  "homepage": "https://github.com/adityabastyas/koda-b6-html#readme"
+  "homepage": "https://github.com/adityabastyas/koda-b6-html#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "eslint": "^9.39.2",
+    "globals": "^17.0.0"
+  }
 }
