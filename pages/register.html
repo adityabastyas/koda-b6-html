@@ -14,6 +14,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../style/register.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <title>Register</title>
   </head>
@@ -175,76 +176,151 @@
     </div>
 
     <script>
-      const form = document.querySelector("form");
-      const inputName = document.getElementById("name");
-      const inputEmail = document.getElementById("email");
-      const inputPassword = document.getElementById("password");
-      const confirmPassword = document.getElementById("confirm-password");
-      const toggle = document.getElementById("toggle");
-      const toggle2 = document.getElementById("toggle2");
+      $(document).ready(() => {
+        const form = $("form");
+        const inputName = $("#name");
+        const inputEmail = $("#email");
+        const inputPassword = $("#password");
+        const confirmPassword = $("#confirm-password");
+        const toggle = $("#toggle");
+        const toggle2 = $("#toggle2");
 
-      toggle.addEventListener("change", (e) => {
-        if (e.target.checked) {
-          inputPassword.type = "text";
-        } else {
-          inputPassword.type = "password";
-        }
+        toggle.on("change", function () {
+          inputPassword.attr("type", this.checked ? "text" : "password");
+        });
+
+        toggle2.on("change", function () {
+          confirmPassword.attr("type", this.checked ? "text" : "password");
+        });
+
+        form.on("submit", (e) => {
+          e.preventDefault();
+
+          const name = inputName.val().trim();
+          const email = inputEmail.val().trim();
+          const password = inputPassword.val().trim();
+          const confirm = confirmPassword.val().trim();
+
+          const labelNama = form.find(".input-wrapper:nth-child(1)");
+          labelNama.find("span").remove();
+          if (name === "") {
+            return labelNama.append(
+              $("<span>", {
+                text: "nama tidak boleh kosong",
+                css: { color: "red" },
+              }),
+            );
+          }
+
+          const labelEmail = form.find(".input-wrapper:nth-child(2)");
+          labelEmail.find("span").remove();
+          if (email === "") {
+            return labelEmail.append(
+              $("<span>", {
+                text: "email tidak boleh kosong",
+                css: { color: "red" },
+              }),
+            );
+          }
+
+          const labelPassword = form.find(".input-wrapper:nth-child(3)");
+          labelPassword.find("span").remove();
+          if (password === "") {
+            return labelPassword.append(
+              $("<span>", {
+                text: "password tidak boleh kosong",
+                css: { color: "red" },
+              }),
+            );
+          }
+
+          const labelConfirm = form.find(".input-wrapper:nth-child(4)");
+          labelConfirm.find("span").remove();
+          if (confirm !== password) {
+            return labelConfirm.append(
+              $("<span>", {
+                text: "confirm password tidak sama",
+                css: { color: "red" },
+              }),
+            );
+          }
+
+          localStorage.setItem("user", JSON.stringify({ email, password }));
+
+          window.location.href = "./login.html";
+        });
       });
 
-      toggle2.addEventListener("change", (e) => {
-        if (e.target.checked) {
-          confirmPassword.type = "text";
-        } else {
-          confirmPassword.type = "password";
-        }
-      });
+      // const form = document.querySelector("form");
+      // const inputName = document.getElementById("name");
+      // const inputEmail = document.getElementById("email");
+      // const inputPassword = document.getElementById("password");
+      // const confirmPassword = document.getElementById("confirm-password");
+      // const toggle = document.getElementById("toggle");
+      // const toggle2 = document.getElementById("toggle2");
 
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
+      // toggle.addEventListener("change", (e) => {
+      //   if (e.target.checked) {
+      //     inputPassword.type = "text";
+      //   } else {
+      //     inputPassword.type = "password";
+      //   }
+      // });
 
-        const name = inputName.value.trim();
-        const email = inputEmail.value.trim();
-        const password = inputPassword.value.trim();
-        const confirm = confirmPassword.value.trim();
+      // toggle2.addEventListener("change", (e) => {
+      //   if (e.target.checked) {
+      //     confirmPassword.type = "text";
+      //   } else {
+      //     confirmPassword.type = "password";
+      //   }
+      // });
 
-        const labelNama = form.querySelector(".input-wrapper:nth-child(1)");
-        labelNama.querySelector("span")?.remove();
-        if (name === "") {
-          const spanNama = document.createElement("span");
-          spanNama.style.color = "red";
-          spanNama.textContent = "nama tidak boleh kosong";
-          return labelNama.appendChild(spanNama);
-        }
+      // form.addEventListener("submit", (e) => {
+      //   e.preventDefault();
 
-        const labelEmail = form.querySelector(".input-wrapper:nth-child(2)");
-        labelEmail.querySelector("span")?.remove();
-        if (email === "") {
-          const spanEmail = document.createElement("span");
-          spanEmail.style.color = "red";
-          spanEmail.textContent = "email tidak boleh kosong";
-          return labelEmail.appendChild(spanEmail);
-        }
+      //   const name = inputName.value.trim();
+      //   const email = inputEmail.value.trim();
+      //   const password = inputPassword.value.trim();
+      //   const confirm = confirmPassword.value.trim();
 
-        const labelPassword = form.querySelector(".input-wrapper:nth-child(3)");
-        labelPassword.querySelector("span")?.remove();
-        if (password === "") {
-          const spanPassword = document.createElement("span");
-          spanPassword.style.color = "red";
-          spanPassword.textContent = "password tidak boleh kosong";
-          return labelPassword.appendChild(spanPassword);
-        }
+      //   const labelNama = form.querySelector(".input-wrapper:nth-child(1)");
+      //   labelNama.querySelector("span")?.remove();
+      //   if (name === "") {
+      //     const spanNama = document.createElement("span");
+      //     spanNama.style.color = "red";
+      //     spanNama.textContent = "nama tidak boleh kosong";
+      //     return labelNama.appendChild(spanNama);
+      //   }
 
-        const labelConfirm = form.querySelector(".input-wrapper:nth-child(4)");
-        labelConfirm.querySelector("span")?.remove();
-        if (confirm !== password) {
-          const spanConfirm = document.createElement("span");
-          spanConfirm.style.color = "red";
-          spanConfirm.textContent = "confirm password tidak sama";
-          return labelConfirm.appendChild(spanConfirm);
-        }
+      //   const labelEmail = form.querySelector(".input-wrapper:nth-child(2)");
+      //   labelEmail.querySelector("span")?.remove();
+      //   if (email === "") {
+      //     const spanEmail = document.createElement("span");
+      //     spanEmail.style.color = "red";
+      //     spanEmail.textContent = "email tidak boleh kosong";
+      //     return labelEmail.appendChild(spanEmail);
+      //   }
 
-        window.location.href = "./login.html";
-      });
+      //   const labelPassword = form.querySelector(".input-wrapper:nth-child(3)");
+      //   labelPassword.querySelector("span")?.remove();
+      //   if (password === "") {
+      //     const spanPassword = document.createElement("span");
+      //     spanPassword.style.color = "red";
+      //     spanPassword.textContent = "password tidak boleh kosong";
+      //     return labelPassword.appendChild(spanPassword);
+      //   }
+
+      //   const labelConfirm = form.querySelector(".input-wrapper:nth-child(4)");
+      //   labelConfirm.querySelector("span")?.remove();
+      //   if (confirm !== password) {
+      //     const spanConfirm = document.createElement("span");
+      //     spanConfirm.style.color = "red";
+      //     spanConfirm.textContent = "confirm password tidak sama";
+      //     return labelConfirm.appendChild(spanConfirm);
+      //   }
+
+      //   window.location.href = "./login.html";
+      // });
     </script>
   </body>
 </html>
