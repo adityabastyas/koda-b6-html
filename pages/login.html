@@ -132,21 +132,12 @@
   </body>
 
   <script>
-    const users = [
-      {
-        email: "koda@mail.com",
-        password: "1234",
-      },
-      {
-        email: "adit@mail.com",
-        password: "6789",
-      },
-    ];
-
     const form = document.querySelector("form");
     const inputEmail = document.getElementById("email");
     const inputPassword = document.getElementById("password");
     const toggle = document.getElementById("toggle");
+
+    const localMemory = JSON.parse(localStorage.getItem("user"));
 
     toggle.addEventListener("change", function (e) {
       if (e.target.checked) {
@@ -180,11 +171,11 @@
         return labelPassword.appendChild(spanPassword);
       }
 
-      const user = users.find((a) => {
-        return a.email === email && a.password === password;
-      });
-
-      if (user) {
+      if (
+        localMemory &&
+        localMemory.email === email &&
+        localMemory.password === password
+      ) {
         window.location.href = "../index.html";
       } else {
         const spanPassword = document.createElement("span");
