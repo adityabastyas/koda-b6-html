@@ -417,28 +417,28 @@
       ];
 
       const url = new URLSearchParams(window.location.search);
-      const selectId = params.get("id");
+      const selectId = url.get("id");
 
       const selectProduct = product.find((item) => {
-        item.id == selectId;
+        return item.id == selectId;
       });
 
       const imageCoffe = document.createElement("div");
       imageCoffe.className = "image-coffe";
       const imgSatu = document.createElement("img");
-      imgSatu.src = item.image.imageSatu;
+      imgSatu.src = selectProduct.image.imageSatu;
       imgSatu.alt = "coffee";
       imageCoffe.appendChild(imgSatu);
 
       const containerChildImage = document.createElement("div");
       const imgDua = document.createElement("img");
-      imgDua.src = item.image.imageDua;
+      imgDua.src = selectProduct.image.imageDua;
       imgDua.alt = "copee";
       const imgTiga = document.createElement("img");
-      imgTiga.src = item.image.imageTiga;
+      imgTiga.src = selectProduct.image.imageTiga;
       imgTiga.alt = "copee";
       const imgEmpat = document.createElement("img");
-      imgEmpat.src = item.image.imageEmpat;
+      imgEmpat.src = selectProduct.image.imageEmpat;
       imgEmpat.alt = "copee";
 
       containerChildImage.append(imgDua, imgTiga, imgEmpat);
@@ -455,17 +455,17 @@
 
       const titleMenuTitle = document.createElement("h3");
       titleMenuTitle.className = "title-menu-title";
-      titleMenuTitle.textContent = item.name;
+      titleMenuTitle.textContent = selectProduct.name;
       article.appendChild(titleMenuTitle);
 
       const idrLine = document.createElement("span");
       idrLine.className = "idr-line";
-      idrLine.textContent = `IDR${item.price}`;
+      idrLine.textContent = `IDR${selectProduct.price}`;
       article.appendChild(idrLine);
 
       const menuPrice = document.createElement("span");
       menuPrice.className = "menu-price";
-      menuPrice.textContent = `IDR${item.discount}`;
+      menuPrice.textContent = `IDR${selectProduct.discount}`;
       article.appendChild(menuPrice);
 
       const rating = document.createElement("div");
