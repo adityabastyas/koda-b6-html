@@ -108,6 +108,7 @@ img.cart-icon {
   font-weight: 500;
   padding: 10px;
   border-radius: 6px;
+  cursor: pointer;
 }
 
 .article-payment {
@@ -125,7 +126,8 @@ img.cart-icon {
 
 .article-payment > div > img {
   width: 100%;
-  max-width: 180px;
+  height: 100%;
+  /* max-width: 180px; */
 }
 
 .flash {
@@ -133,13 +135,15 @@ img.cart-icon {
   flex-direction: column;
   gap: 15px;
   position: relative;
+  width: 100%;
+  margin-top: 11px;
 }
 
 .flash > .icon-x {
   position: absolute;
-  top: 70px;
-  right: 0;
-  text-align: end;
+  top: 60px;
+  right: 10px;
+  cursor: pointer;
 }
 h4.flash-sale {
   color: #ffffff;
@@ -150,6 +154,7 @@ h4.flash-sale {
   border-radius: 24px;
   background-color: #d00000;
   display: inline-block;
+  width: max-content;
 }
 
 h3.title-menu-title {
@@ -157,6 +162,11 @@ h3.title-menu-title {
   font-weight: 500;
   color: #0b132a;
   font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.flash > span {
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .idr-line {

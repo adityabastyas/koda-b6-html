@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,6 +11,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../style/checkout-product.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
     <title>Checkout</title>
   </head>
   <body>
@@ -65,10 +67,10 @@
 
     <div class="grid">
       <section class="payment">
-        <h1>Payment Details</h1>
+        <!-- <h1>Payment Details</h1>
         <div>
           <span>Your Order</span>
-          <span>+ Add Menu</span>
+          <span >+ Add Menu</span>
         </div>
 
         <article class="article-payment">
@@ -78,8 +80,8 @@
             <h3 class="title-menu-title">Hazelnut Latte</h3>
             <span>2pcs | Regular | Ice | Dine In</span>
             <div>
-              <span class="idr-line">IDR 20.000</span>
-              <span class="menu-price">IDR 10.000</span>
+              <span class="idr-line">IDR 40.000</span>
+              <span class="menu-price">IDR 20.000</span>
             </div>
             <div class="icon-x">
               <img
@@ -89,7 +91,7 @@
               />
             </div>
           </div>
-        </article>
+        </article> -->
       </section>
 
       <section class="payment-info">
@@ -239,5 +241,92 @@
         /></a>
       </section>
     </footer>
+
+    <script>
+      const payment = $(".payment");
+
+      const title = $("<h1>");
+      title.text("Payment Details");
+      payment.append(title);
+
+      const headerDiv = $("<div>");
+
+      const spanOrder = $("<span>");
+      spanOrder.text("Your Order");
+      headerDiv.append(spanOrder);
+
+      const spanAdd = $("<span>");
+      spanAdd.text("+ Add Menu");
+      headerDiv.append(spanAdd);
+
+      payment.append(headerDiv);
+
+      function addMenuItem() {
+        const article = $("<article>");
+        article.addClass("article-payment");
+
+        const imgDiv = $("<div>");
+        const img = $("<img>");
+        img.attr("src", "../images/image 31.png");
+        imgDiv.append(img);
+
+        article.append(imgDiv);
+
+        const flash = $("<div>");
+        flash.addClass("flash");
+
+        const flashSale = $("<h4>");
+        flashSale.addClass("flash-sale");
+        flashSale.text("FLASH SALE!");
+        flash.append(flashSale);
+
+        const titleMenu = $("<h3>");
+        titleMenu.addClass("title-menu-title");
+        titleMenu.text("Hazelnut Latte");
+        flash.append(titleMenu);
+
+        const varian = $("<span>");
+        varian.text("2pcs | Regular | Ice | Dine In");
+        flash.append(varian);
+
+        const priceDiv = $("<div>");
+
+        const oldPrice = $("<span>");
+        oldPrice.addClass("idr-line");
+        oldPrice.text("IDR 40.000");
+        priceDiv.append(oldPrice);
+
+        const newPrice = $("<span>");
+        newPrice.addClass("menu-price");
+        newPrice.text("IDR 20.000");
+        priceDiv.append(newPrice);
+
+        flash.append(priceDiv);
+
+        const iconWrapper = $("<div>");
+        iconWrapper.addClass("icon-x");
+
+        const iconImg = $("<img>");
+        iconImg.addClass("icon-x");
+        iconImg.attr("src", "../images/icon/XCircle.svg");
+
+        iconWrapper.append(iconImg);
+        flash.append(iconWrapper);
+
+        article.append(flash);
+
+        payment.append(article);
+
+        iconWrapper.on("click", () => {
+          article.remove();
+        });
+      }
+
+      addMenuItem();
+
+      spanAdd.on("click", () => {
+        addMenuItem();
+      });
+    </script>
   </body>
 </html>
