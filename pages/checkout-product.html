@@ -156,7 +156,7 @@
 
       <section class="total">
         <h2>Total</h2>
-        <article>
+        <!-- <article>
           <div class="container-order">
             <span class="order">Order</span>
             <span class="price">Idr. 40.000</span>
@@ -187,7 +187,7 @@
           </div>
 
           <p class="we">*Get Discount if you pay with Bank Central Asia</p>
-        </article>
+        </article> -->
       </section>
     </div>
 
@@ -261,72 +261,180 @@
 
       payment.append(headerDiv);
 
-      function addMenuItem() {
-        const article = $("<article>");
-        article.addClass("article-payment");
+      const article = $("<article>");
+      article.addClass("article-payment");
 
-        const imgDiv = $("<div>");
-        const img = $("<img>");
-        img.attr("src", "../images/image 31.png");
-        imgDiv.append(img);
+      const imgDiv = $("<div>");
+      const img = $("<img>");
+      img.attr("src", "../images/image 31.png");
+      imgDiv.append(img);
 
-        article.append(imgDiv);
+      article.append(imgDiv);
 
-        const flash = $("<div>");
-        flash.addClass("flash");
+      const flash = $("<div>");
+      flash.addClass("flash");
 
-        const flashSale = $("<h4>");
-        flashSale.addClass("flash-sale");
-        flashSale.text("FLASH SALE!");
-        flash.append(flashSale);
+      const flashSale = $("<h4>");
+      flashSale.addClass("flash-sale");
+      flashSale.text("FLASH SALE!");
+      flash.append(flashSale);
 
-        const titleMenu = $("<h3>");
-        titleMenu.addClass("title-menu-title");
-        titleMenu.text("Hazelnut Latte");
-        flash.append(titleMenu);
+      const titleMenu = $("<h3>");
+      titleMenu.addClass("title-menu-title");
+      titleMenu.text("Hazelnut Latte");
+      flash.append(titleMenu);
 
-        const varian = $("<span>");
-        varian.text("2pcs | Regular | Ice | Dine In");
-        flash.append(varian);
+      const varian = $("<span>");
+      varian.text("2pcs | Regular | Ice | Dine In");
+      flash.append(varian);
 
-        const priceDiv = $("<div>");
+      const priceDiv = $("<div>");
 
-        const oldPrice = $("<span>");
-        oldPrice.addClass("idr-line");
-        oldPrice.text("IDR 40.000");
-        priceDiv.append(oldPrice);
+      const oldPrice = $("<span>");
+      oldPrice.addClass("idr-line");
+      oldPrice.text("IDR 40.000");
+      priceDiv.append(oldPrice);
 
-        const newPrice = $("<span>");
-        newPrice.addClass("menu-price");
-        newPrice.text("IDR 20.000");
-        priceDiv.append(newPrice);
+      const newPrice = $("<span>");
+      newPrice.addClass("menu-price");
+      newPrice.text("IDR 20.000");
+      priceDiv.append(newPrice);
 
-        flash.append(priceDiv);
+      flash.append(priceDiv);
 
-        const iconWrapper = $("<div>");
-        iconWrapper.addClass("icon-x");
+      const iconWrapper = $("<div>");
+      iconWrapper.addClass("icon-x");
 
-        const iconImg = $("<img>");
-        iconImg.addClass("icon-x");
-        iconImg.attr("src", "../images/icon/XCircle.svg");
+      const iconImg = $("<img>");
+      iconImg.addClass("icon-x");
+      iconImg.attr("src", "../images/icon/XCircle.svg");
 
-        iconWrapper.append(iconImg);
-        flash.append(iconWrapper);
+      iconWrapper.append(iconImg);
+      flash.append(iconWrapper);
 
-        article.append(flash);
+      article.append(flash);
 
-        payment.append(article);
+      payment.append(article);
 
-        iconWrapper.on("click", () => {
-          article.remove();
-        });
-      }
-
-      addMenuItem();
-
-      spanAdd.on("click", () => {
-        addMenuItem();
+      iconWrapper.on("click", () => {
+        article.remove();
       });
+
+      //total
+      const articleRight = $("<article>");
+
+      const orderRow = $("<div>");
+      orderRow.addClass("container-order");
+
+      const orderLabel = $("<span>");
+      orderLabel.addClass("order");
+      orderLabel.text("Order");
+      orderRow.append(orderLabel);
+
+      const orderPrice = $("<span>");
+      orderPrice.addClass("price");
+      orderPrice.text("Idr. 40.000");
+      orderRow.append(orderPrice);
+
+      articleRight.append(orderRow);
+
+      const deliveryRow = $("<div>");
+      deliveryRow.addClass("container-order");
+
+      const deliveryLabel = $("<span>");
+      deliveryLabel.addClass("order");
+      deliveryLabel.text("Delivery");
+      deliveryRow.append(deliveryLabel);
+
+      const deliveryPrice = $("<span>");
+      deliveryPrice.addClass("price");
+      deliveryPrice.text("Idr. 0");
+      deliveryRow.append(deliveryPrice);
+
+      articleRight.append(deliveryRow);
+
+      const taxRow = $("<div>");
+      taxRow.addClass("container-order");
+
+      const taxLabel = $("<span>");
+      taxLabel.addClass("order");
+      taxLabel.text("Tax");
+      taxRow.append(taxLabel);
+
+      const taxPrice = $("<span>");
+      taxPrice.addClass("price");
+      taxPrice.text("Idr. 4000");
+      taxRow.append(taxPrice);
+
+      articleRight.append(taxRow);
+
+      const subtotalRow = $("<div>");
+      subtotalRow.addClass("container-order");
+
+      const subtotalLabel = $("<span>");
+      subtotalLabel.addClass("order");
+      subtotalLabel.text("Sub Total");
+      subtotalRow.append(subtotalLabel);
+
+      const subtotalPrice = $("<span>");
+      subtotalPrice.addClass("price");
+      subtotalPrice.text("Idr. 44.000");
+      subtotalRow.append(subtotalPrice);
+
+      articleRight.append(subtotalRow);
+
+      const checkout = $("<a>");
+      checkout.addClass("history");
+      checkout.attr("href", "./history.html");
+      checkout.text("Checkout");
+      articleRight.append(checkout);
+
+      const weAccept = $("<span>");
+      weAccept.addClass("we");
+      weAccept.text("We Accept");
+      articleRight.append(weAccept);
+
+      const bank = $("<div>");
+      bank.addClass("bank");
+
+      const imgBri = $("<img>");
+      imgBri.attr("src", "../images/icon/BRI.svg");
+      imgBri.attr("alt", "BRI-icon");
+      bank.append(imgBri);
+
+      const imgdana = $("<img>");
+      imgdana.attr("src", "../images/icon/DANA.svg");
+      imgdana.attr("alt", "DANA-icon");
+      bank.append(imgdana);
+
+      const imgBca = $("<img>");
+      imgBca.attr("src", "../images/icon/BCA.svg");
+      imgBca.attr("alt", "BCA-icon");
+      bank.append(imgBca);
+
+      const imgGopay = $("<img>");
+      imgGopay.attr("src", "../images/icon/GOPAY.svg");
+      imgGopay.attr("alt", "GOPAY-icon");
+      bank.append(imgGopay);
+
+      const imgOvo = $("<img>");
+      imgOvo.attr("src", "../images/icon/OVO.svg");
+      imgOvo.attr("alt", "OVO-icon");
+      bank.append(imgOvo);
+
+      const imgPaypal = $("<img>");
+      imgPaypal.attr("src", "../images/icon/PAYPAL.svg");
+      imgPaypal.attr("alt", "PAYPAL-icon");
+      bank.append(imgPaypal);
+
+      articleRight.append(bank);
+
+      const footnote = $("<p>");
+      footnote.addClass("we");
+      footnote.text("*Get Discount if you pay with Bank Central Asia");
+      articleRight.append(footnote);
+
+      $(".total").append(articleRight);
     </script>
   </body>
 </html>
