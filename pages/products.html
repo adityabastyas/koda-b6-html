@@ -631,126 +631,148 @@
     </footer>
 
     <script>
-      const product = [
-        {
-          id: 1,
-          image: "../images/image 27.png",
-          name: "Hazelnut Latte",
-          description:
-            "You can explore the menu that we provide with fun and have their own taste and make your day better.",
-          price: "20.000",
-          discount: "10.000",
-        },
-        {
-          id: 2,
-          image: "../images/image 22.png",
-          name: "Expresso",
-          description:
-            "You can explore the menu that we provide with fun and have their own taste and make your day better.",
-          price: "40.000",
-          discount: "20.000",
-        },
-        {
-          id: 3,
-          image: "../images/image 30.png",
-          name: "Expresso",
-          description:
-            "You can explore the menu that we provide with fun and have their own taste and make your day better.",
-          price: "40.000",
-          discount: "20.000",
-        },
-        {
-          id: 4,
-          image: "../images/image 31.png",
-          name: "Hazelnut Latte",
-          description:
-            "You can explore the menu that we provide with fun and have their own taste and make your day better.",
-          price: "40.000",
-          discount: "20.000",
-        },
-        {
-          id: 5,
-          image: "../images/image 22.png",
-          name: "Expresso",
-          description:
-            "You can explore the menu that we provide with fun and have their own taste and make your day better.",
-          price: "40.000",
-          discount: "20.000",
-        },
-        {
-          id: 6,
-          image: "../images/image 27.png",
-          name: "Hazelnut Latte",
-          description:
-            "You can explore the menu that we provide with fun and have their own taste and make your day better.",
-          price: "20.000",
-          discount: "10.000",
-        },
-      ];
+      // const product = [
+      //   {
+      //     id: 1,
+      //     image: "../images/image 27.png",
+      //     name: "Hazelnut Latte",
+      //     description:
+      //       "You can explore the menu that we provide with fun and have their own taste and make your day better.",
+      //     price: "20.000",
+      //     discount: "10.000",
+      //   },
+      //   {
+      //     id: 2,
+      //     image: "../images/image 22.png",
+      //     name: "Expresso",
+      //     description:
+      //       "You can explore the menu that we provide with fun and have their own taste and make your day better.",
+      //     price: "40.000",
+      //     discount: "20.000",
+      //   },
+      //   {
+      //     id: 3,
+      //     image: "../images/image 30.png",
+      //     name: "Expresso",
+      //     description:
+      //       "You can explore the menu that we provide with fun and have their own taste and make your day better.",
+      //     price: "40.000",
+      //     discount: "20.000",
+      //   },
+      //   {
+      //     id: 4,
+      //     image: "../images/image 31.png",
+      //     name: "Hazelnut Latte",
+      //     description:
+      //       "You can explore the menu that we provide with fun and have their own taste and make your day better.",
+      //     price: "40.000",
+      //     discount: "20.000",
+      //   },
+      //   {
+      //     id: 5,
+      //     image: "../images/image 22.png",
+      //     name: "Expresso",
+      //     description:
+      //       "You can explore the menu that we provide with fun and have their own taste and make your day better.",
+      //     price: "40.000",
+      //     discount: "20.000",
+      //   },
+      //   {
+      //     id: 6,
+      //     image: "../images/image 27.png",
+      //     name: "Hazelnut Latte",
+      //     description:
+      //       "You can explore the menu that we provide with fun and have their own taste and make your day better.",
+      //     price: "20.000",
+      //     discount: "10.000",
+      //   },
+      // ];
 
-      const container = $(".container-hazelnut");
+      const url =
+        "https://raw.githubusercontent.com/adityabastyas/koda-b6-html/refs/heads/main/data/data.json";
 
-      product.forEach((item) => {
-        const article = $("<article>").addClass("menu");
+      async function getProducts() {
+        try {
+          const res = await fetch(url);
 
-        const header = $("<header>").addClass("header-menu");
-        const img = $("<img>").attr("src", item.image).attr("alt", item.name);
-        header.append(img);
-        article.append(header);
+          if (!res.ok) {
+            throw new Error("gagal mengambil data");
+          }
 
-        const titleMenu = $("<div>").addClass("title-menu");
+          const data = await res.json();
+          const products = data.products;
 
-        const h3 = $("<h3>").addClass("title-menu-title").text(item.name);
-        titleMenu.append(h3);
+          const container = $(".container-hazelnut");
 
-        const p = $("<p>").addClass("title-menu-text").text(item.description);
-        titleMenu.append(p);
+          products.forEach((item) => {
+            const article = $("<article>").addClass("menu");
 
-        const rating = $("<div>").addClass("rating");
-        for (let i = 0; i < 5; i++) {
-          rating.append(
-            $("<img>")
-              .addClass("start")
-              .attr("src", "../images/icon/start.svg"),
-          );
+            const header = $("<header>").addClass("header-menu");
+            const img = $("<img>")
+              .attr("src", item.image.imageSatu)
+              .attr("alt", item.name);
+            header.append(img);
+            article.append(header);
+
+            const titleMenu = $("<div>").addClass("title-menu");
+
+            const h3 = $("<h3>").addClass("title-menu-title").text(item.name);
+            titleMenu.append(h3);
+
+            const p = $("<p>")
+              .addClass("title-menu-text")
+              .text(item.description);
+            titleMenu.append(p);
+
+            const rating = $("<div>").addClass("rating");
+            for (let i = 0; i < 5; i++) {
+              rating.append(
+                $("<img>")
+                  .addClass("start")
+                  .attr("src", "../images/icon/start.svg"),
+              );
+            }
+            rating.append($("<span>").addClass("rating-number").text("5.0"));
+            titleMenu.append(rating);
+
+            titleMenu.append(
+              $("<span>").addClass("idr-line").text(`IDR ${item.price}`),
+            );
+            titleMenu.append(
+              $("<span>").addClass("menu-price").text(`IDR ${item.discount}`),
+            );
+
+            const footer = $("<footer>").addClass("menu-footer");
+
+            const buyButton = $("<button>").addClass("menu-button");
+            const buyLink = $("<a>")
+              .attr("href", `./products-detail.html?id=${item.id}`)
+              .text("Buy");
+            buyButton.append(buyLink);
+            footer.append(buyButton);
+
+            const cartLink = $("<a>")
+              .addClass("icon-cart-shopping")
+              .attr("href", "#");
+            const cartImg = $("<img>").attr(
+              "src",
+              "../images/icon/ShoppingCart.svg",
+            );
+            cartLink.append(cartImg);
+            footer.append(cartLink);
+
+            titleMenu.append(footer);
+            article.append(titleMenu);
+
+            const flash = $("<h4>").addClass("flash-sale").text("FLASH SALE!");
+            article.append(flash);
+
+            container.append(article);
+          });
+        } catch (error) {
+          console.log("error", error);
         }
-        rating.append($("<span>").addClass("rating-number").text("5.0"));
-        titleMenu.append(rating);
-
-        titleMenu.append(
-          $("<span>").addClass("idr-line").text(`IDR ${item.price}`),
-        );
-        titleMenu.append(
-          $("<span>").addClass("menu-price").text(`IDR ${item.discount}`),
-        );
-
-        const footer = $("<footer>").addClass("menu-footer");
-
-        const buyButton = $("<button>").addClass("menu-button");
-        const buyLink = $("<a>")
-          .attr("href", `./products-detail.html?id=${item.id}`)
-          .text("Buy");
-        buyButton.append(buyLink);
-        footer.append(buyButton);
-
-        const cartLink = $("<a>")
-          .addClass("icon-cart-shopping")
-          .attr("href", "#");
-        const cartImg = $("<img>").attr(
-          "src",
-          "../images/icon/ShoppingCart.svg",
-        );
-        cartLink.append(cartImg);
-        footer.append(cartLink);
-
-        titleMenu.append(footer);
-        article.append(titleMenu);
-
-        const flash = $("<h4>").addClass("flash-sale").text("FLASH SALE!");
-        article.append(flash);
-
-        container.append(article);
-      });
+      }
     </script>
   </body>
 </html>
