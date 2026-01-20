@@ -426,105 +426,126 @@
     </footer>
 
     <script>
-      const product = [
-        {
-          id: 1,
-          image: "./images/image 27.png",
-          alt: "item 27",
-          title: "Hazelnut Latte",
-          description: `You can explore the menu   that we provide with fun and have their
-          own taste and make your day better.`,
-          price: "IDR 20.000",
-        },
+      // const product = [
+      //   {
+      //     id: 1,
+      //     image: "./images/image 27.png",
+      //     alt: "item 27",
+      //     title: "Hazelnut Latte",
+      //     description: `You can explore the menu   that we provide with fun and have their
+      //     own taste and make your day better.`,
+      //     price: "IDR 20.000",
+      //   },
 
-        {
-          id: 2,
-          image: "./images/image 22.png",
-          alt: "item 22",
-          title: "Expresso",
-          description: `You can explore the menu that we provide with fun and have their own taste and make your day better.`,
-          price: "IDR 40.000",
-        },
-        {
-          id: 3,
-          image: "./images/image 30.png",
-          alt: "item 30",
-          title: "Hazelnut Latte",
-          description: `You can explore the menu   that we provide with fun and have their
-          own taste and make your day better.`,
-          price: "IDR 20.000",
-        },
-        {
-          id: 4,
-          image: "./images/image 31.png",
-          alt: "item 31",
-          title: "Expresso",
-          description: `You can explore the menu that we provide with fun and have their own taste and make your day better`,
-          price: "IDR 40.000",
-        },
-      ];
+      //   {
+      //     id: 2,
+      //     image: "./images/image 22.png",
+      //     alt: "item 22",
+      //     title: "Expresso",
+      //     description: `You can explore the menu that we provide with fun and have their own taste and make your day better.`,
+      //     price: "IDR 40.000",
+      //   },
+      //   {
+      //     id: 3,
+      //     image: "./images/image 30.png",
+      //     alt: "item 30",
+      //     title: "Hazelnut Latte",
+      //     description: `You can explore the menu   that we provide with fun and have their
+      //     own taste and make your day better.`,
+      //     price: "IDR 20.000",
+      //   },
+      //   {
+      //     id: 4,
+      //     image: "./images/image 31.png",
+      //     alt: "item 31",
+      //     title: "Expresso",
+      //     description: `You can explore the menu that we provide with fun and have their own taste and make your day better`,
+      //     price: "IDR 40.000",
+      //   },
+      // ];
 
-      product.forEach((product) => {
-        const article = document.createElement("article");
-        article.className = "menu";
+      const url =
+        "https://raw.githubusercontent.com/adityabastyas/koda-b6-html/refs/heads/main/data/data.json";
 
-        const header = document.createElement("header");
-        header.className = "header-menu";
-        const img = document.createElement("img");
-        img.src = product.image;
-        img.alt = product.alt;
+      async function getProducts() {
+        try {
+          const res = await fetch(url);
 
-        header.append(img);
+          if (!res.ok) {
+            throw new Error("gagal mengambil data");
+          }
 
-        article.appendChild(header);
+          const data = await res.json();
 
-        const titleMenu = document.createElement("div");
-        titleMenu.className = "title-menu";
+          const products = data.products.slice(0, 4);
 
-        const h3 = document.createElement("h3");
-        h3.className = "title-menu-title";
-        h3.textContent = "Hazelnut Latte";
-        titleMenu.appendChild(h3);
+          products.forEach((product) => {
+            const article = document.createElement("article");
+            article.className = "menu";
 
-        const p = document.createElement("p");
-        p.className = "title-menu-text";
-        p.textContent = product.description;
-        titleMenu.appendChild(p);
+            const header = document.createElement("header");
+            header.className = "header-menu";
+            const img = document.createElement("img");
+            img.src = product.image.imageSatu;
+            img.alt = product.name;
 
-        const menuPrice = document.createElement("span");
-        menuPrice.className = "menu-price";
-        menuPrice.textContent = product.price;
-        titleMenu.appendChild(menuPrice);
+            header.append(img);
 
-        const footer = document.createElement("footer");
-        footer.className = "menu-footer";
+            article.appendChild(header);
 
-        const aBuy = document.createElement("a");
-        aBuy.href = `./pages/products-detail.html?id=${product.id}`;
-        const menuButton = document.createElement("button");
-        menuButton.className = "menu-button";
-        menuButton.textContent = "Buy";
-        aBuy.appendChild(menuButton);
-        footer.appendChild(aBuy);
+            const titleMenu = document.createElement("div");
+            titleMenu.className = "title-menu";
 
-        const iconCart = document.createElement("a");
-        iconCart.href = `./pages/checkout-product.html`;
-        iconCart.className = "icon-cart-shopping";
+            const h3 = document.createElement("h3");
+            h3.className = "title-menu-title";
+            h3.textContent = "Hazelnut Latte";
+            titleMenu.appendChild(h3);
 
-        const imgCart = document.createElement("img");
-        imgCart.src = "./images/icon/ShoppingCart.svg";
-        imgCart.alt = "icon-cart-shopping";
+            const p = document.createElement("p");
+            p.className = "title-menu-text";
+            p.textContent = product.description;
+            titleMenu.appendChild(p);
 
-        iconCart.appendChild(imgCart);
-        footer.appendChild(iconCart);
+            const menuPrice = document.createElement("span");
+            menuPrice.className = "menu-price";
+            menuPrice.textContent = product.price;
+            titleMenu.appendChild(menuPrice);
 
-        titleMenu.appendChild(footer);
+            const footer = document.createElement("footer");
+            footer.className = "menu-footer";
 
-        article.appendChild(titleMenu);
+            const aBuy = document.createElement("a");
+            aBuy.href = `./pages/products-detail.html?id=${product.id}`;
+            const menuButton = document.createElement("button");
+            menuButton.className = "menu-button";
+            menuButton.textContent = "Buy";
+            aBuy.appendChild(menuButton);
+            footer.appendChild(aBuy);
 
-        const section = document.getElementById("menu");
-        section.append(article);
-      });
+            const iconCart = document.createElement("a");
+            iconCart.href = `./pages/checkout-product.html`;
+            iconCart.className = "icon-cart-shopping";
+
+            const imgCart = document.createElement("img");
+            imgCart.src = "./images/icon/ShoppingCart.svg";
+            imgCart.alt = "icon-cart-shopping";
+
+            iconCart.appendChild(imgCart);
+            footer.appendChild(iconCart);
+
+            titleMenu.appendChild(footer);
+
+            article.appendChild(titleMenu);
+
+            const section = document.getElementById("menu");
+            section.append(article);
+          });
+        } catch (error) {
+          console.log("error :", error);
+        }
+      }
+
+      getProducts();
 
       // testimonial
 
