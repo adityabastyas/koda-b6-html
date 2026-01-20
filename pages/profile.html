@@ -69,15 +69,17 @@
     </header> -->
 
     <main
-      class="px-5 pt-9 pb-8 lg:pt-[78px] lg:pr-[130px] lg:pb-[50px] lg:pl-[130px]"
+      class="px-5 pt-9 pb-8 lg:pt-[78px] lg:pr-[130px] lg:pb-[50px] lg:pl-[130px] font-['Plus_Jakarta_Sans']"
     >
       <h1 class="text-[#0b0909] lg:text-[48px] font-medium">Profile</h1>
-      <div class="container-profile grid gap-5 grid-cols-2">
+      <div
+        class="container-profile grid gap-5 grid-cols-[auto_1fr] items-stretch"
+      >
         <section
-          class="left border border-[#e8e8e8] p-6 flex flex-col gap-3 items-center"
+          class="left border border-[#e8e8e8] p-6 flex flex-col gap-3 items-center self-start"
         >
-          <h4 class="text-5 font-medium text-[#0b132a]">Ghaluh Wizard</h4>
-          <span class="font-normal text-5 text-[#4f5665]"
+          <h4 class="text-xl font-medium text-[#0b132a]">Ghaluh Wizard</h4>
+          <span class="font-normal text-xl text-[#4f5665]"
             >ghaluhwizz@gmail.com</span
           >
           <img
@@ -86,11 +88,11 @@
             alt="profile-image"
           />
           <button
-            class="text-3 font-medium text-[#0b132a] bg-[#ff8906] rounded-md px-12 py-3"
+            class="text-sm font-medium text-[#0b132a] bg-[#ff8906] rounded-md px-12 py-3"
           >
             Upload New Photo
           </button>
-          <span class="text-[#4f5665] font-semibold text-4"
+          <span class="text-[#4f5665] font-semibold text-base"
             >Since 20 January 2022</span
           >
         </section>
@@ -112,11 +114,11 @@
               <img
                 src="../images/icon/Profile.svg"
                 alt="icon-name"
-                class="icon-name absolute top-[53px] left-[13px] z-2"
+                class="icon-name absolute top-[53px] left-[13px] z-[2]"
               />
             </div>
 
-            <div class="input-wrapper">
+            <div class="input-wrapper relative">
               <label
                 class="label block font-medium text-base text-[#0b132a]"
                 for="email"
@@ -132,11 +134,11 @@
               <img
                 src="../images/icon/mail.svg"
                 alt="icon-email"
-                class="icon-name"
+                class="icon-name absolute top-[58px] left-[13px] z-[2]"
               />
             </div>
 
-            <div class="input-wrapper">
+            <div class="input-wrapper relative">
               <label
                 class="label block font-medium text-base text-[#0b132a]"
                 for="phone"
@@ -152,11 +154,11 @@
               <img
                 src="../images/icon/PhoneCall.svg"
                 alt="icon-call"
-                class="icon-name"
+                class="icon-name absolute top-[58px] left-[13px] z-[2]"
               />
             </div>
 
-            <div class="input-wrapper">
+            <div class="input-wrapper relative">
               <label
                 class="label block font-medium text-base text-[#0b132a]"
                 for="password"
@@ -172,27 +174,27 @@
               <img
                 src="../images/icon/Password.svg"
                 alt="icon-email"
-                class="icon-name"
+                class="icon-name absolute top-[58px] left-[13px] z-[2]"
               />
 
-              <input type="checkbox" class="toggle" id="toggle" />
+              <input type="checkbox" class="toggle hidden peer" id="toggle" />
 
-              <label for="toggle">
-                <img
-                  src="../images/icon/EyeSlash.svg"
-                  alt="eye-icon"
-                  class="icon-name eye-icon"
-                />
+              <label
+                for="toggle"
+                class="icon-name eye-icon absolute right-[13px] top-[53px] cursor-pointer peer-checked:hidden"
+              >
+                <img src="../images/icon/EyeSlash.svg" alt="eye-icon" />
+              </label>
 
-                <img
-                  src="../images/icon/eyeShow.svg"
-                  alt="eye-show-icon"
-                  class="icon-name eye-show-icon"
-                />
+              <label
+                for="toggle"
+                class="icon-name eye-show-icon absolute right-[13px] top-[53px] cursor-pointer hidden peer-checked:block"
+              >
+                <img src="../images/icon/eyeShow.svg" alt="eye-show-icon" />
               </label>
             </div>
 
-            <div class="input-wrapper">
+            <div class="input-wrapper relative">
               <label
                 class="label block font-medium text-base text-[#0b132a]"
                 for="phone"
@@ -208,11 +210,16 @@
               <img
                 src="../images/icon/Location.svg"
                 alt="icon-call"
-                class="icon-name"
+                class="icon-name absolute top-[58px] left-[13px] z-[2]"
               />
             </div>
 
-            <button type="submit" class="button">Submit</button>
+            <button
+              type="submit"
+              class="button block w-full bg-[#ff8906] py-4 cursor-pointer text-[#0b132a] font-medium text-base rounded-md border-hidden text-base"
+            >
+              Submit
+            </button>
           </form>
         </section>
       </div>
