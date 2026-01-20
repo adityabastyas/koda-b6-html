@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,11 +14,12 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sacramento&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../style/profile.css" />
+    <!-- <link rel="stylesheet" href="../style/profile.css" /> -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Profile</title>
   </head>
   <body>
-    <header class="container-header">
+    <!-- <header class="container-header">
       <div class="logo">
         <img
           src="../images/icon/glass.svg"
@@ -65,24 +66,44 @@
           </li>
         </ul>
       </nav>
-    </header>
+    </header> -->
 
-    <main>
-      <h1>Profile</h1>
-      <div class="container-profile">
-        <section class="left">
-          <h4>Ghaluh Wizard</h4>
-          <span>ghaluhwizz@gmail.com</span>
-          <img src="../images/poto.png" alt="profile-image" />
-          <button>Upload New Photo</button>
-          <span>Since 20 January 2022</span>
+    <main
+      class="px-5 pt-9 pb-8 lg:pt-[78px] lg:pr-[130px] lg:pb-[50px] lg:pl-[130px]"
+    >
+      <h1 class="text-[#0b0909] lg:text-[48px] font-medium">Profile</h1>
+      <div class="container-profile grid gap-5 grid-cols-2">
+        <section
+          class="left border border-[#e8e8e8] p-6 flex flex-col gap-3 items-center"
+        >
+          <h4 class="text-5 font-medium text-[#0b132a]">Ghaluh Wizard</h4>
+          <span class="font-normal text-5 text-[#4f5665]"
+            >ghaluhwizz@gmail.com</span
+          >
+          <img
+            class="rounded-full w-[110px] h-[100px]"
+            src="../images/poto.png"
+            alt="profile-image"
+          />
+          <button
+            class="text-3 font-medium text-[#0b132a] bg-[#ff8906] rounded-md px-12 py-3"
+          >
+            Upload New Photo
+          </button>
+          <span class="text-[#4f5665] font-semibold text-4"
+            >Since 20 January 2022</span
+          >
         </section>
         <section class="right">
-          <form>
-            <div class="input-wrapper">
-              <label class="label" for="name">Full Name</label>
+          <form class="border border-[#e8e8e8] px-[50px] pt-6 pb-10">
+            <div class="input-wrapper relative">
+              <label
+                class="label block font-medium text-base text-[#0b132a]"
+                for="name"
+                >Full Name</label
+              >
               <input
-                class="input"
+                class="input font-normal block w-full py-4 pl-12 text-[#4f5665] border border-[#dedede] rounded-lg bg-[#fcfdfe] mt-3 mb-6"
                 name="name"
                 id="name"
                 type="text"
@@ -91,14 +112,18 @@
               <img
                 src="../images/icon/Profile.svg"
                 alt="icon-name"
-                class="icon-name"
+                class="icon-name absolute top-[53px] left-[13px] z-2"
               />
             </div>
 
             <div class="input-wrapper">
-              <label class="label" for="email">Email</label>
+              <label
+                class="label block font-medium text-base text-[#0b132a]"
+                for="email"
+                >Email</label
+              >
               <input
-                class="input"
+                class="input font-normal block w-full py-4 pl-12 text-[#4f5665] border border-[#dedede] rounded-lg bg-[#fcfdfe] mt-3 mb-6"
                 name="email"
                 id="email"
                 type="email"
@@ -112,9 +137,13 @@
             </div>
 
             <div class="input-wrapper">
-              <label class="label" for="phone">Phone</label>
+              <label
+                class="label block font-medium text-base text-[#0b132a]"
+                for="phone"
+                >Phone</label
+              >
               <input
-                class="input"
+                class="input font-normal block w-full py-4 pl-12 text-[#4f5665] border border-[#dedede] rounded-lg bg-[#fcfdfe] mt-3 mb-6"
                 name="phone"
                 id="phone"
                 type="text"
@@ -128,9 +157,13 @@
             </div>
 
             <div class="input-wrapper">
-              <label class="label" for="password">Password</label>
+              <label
+                class="label block font-medium text-base text-[#0b132a]"
+                for="password"
+                >Password</label
+              >
               <input
-                class="input"
+                class="input font-normal block w-full py-4 pl-12 text-[#4f5665] border border-[#dedede] rounded-lg bg-[#fcfdfe] mt-3 mb-6"
                 name="password"
                 id="password"
                 type="password"
@@ -160,9 +193,13 @@
             </div>
 
             <div class="input-wrapper">
-              <label class="label" for="phone">Address</label>
+              <label
+                class="label block font-medium text-base text-[#0b132a]"
+                for="phone"
+                >Address</label
+              >
               <input
-                class="input"
+                class="input font-normal block w-full py-4 pl-12 text-[#4f5665] border border-[#dedede] rounded-lg bg-[#fcfdfe] mt-3 mb-6"
                 name="phone"
                 id="phone"
                 type="text"
@@ -181,7 +218,7 @@
       </div>
     </main>
 
-    <footer>
+    <!-- <footer>
       <section class="coffee-logo">
         <a class="nav-logo" href="#">
           <img src="../images/icon/Frame.svg" alt="logo-coffie" />
@@ -230,6 +267,6 @@
           ><img src="../images/icon/icon-ig.svg" alt="icon-ig"
         /></a>
       </section>
-    </footer>
+    </footer> -->
   </body>
 </html>
