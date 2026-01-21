@@ -28,7 +28,7 @@
         <ul>
           <li class="list">
             <a class="nav-a line" href="../index.html">Home</a>
-            <a class="nav-a" href="#">Product</a>
+            <a class="nav-a" href="./products.html">Product</a>
           </li>
         </ul>
       </nav>
@@ -484,13 +484,32 @@
       minus.textContent = "-";
       plusMinus.appendChild(minus);
 
-      const satu = document.createElement("span");
-      satu.textContent = "1";
+      const satu = document.createElement("input");
+      satu.min = "1";
+      satu.type = "number";
+      satu.value = "1";
+      satu.style.border = "none";
+      satu.style.outline = "none";
+      satu.style.width = "60px";
+
       plusMinus.appendChild(satu);
 
       const plus = document.createElement("button");
       plus.textContent = "+";
       plusMinus.appendChild(plus);
+
+      minus.addEventListener("click", () => {
+        let isMinus = parseInt(satu.value);
+        if (isMinus > 1) {
+          satu.value = isMinus - 1;
+        }
+      });
+
+      plus.addEventListener("click", () => {
+        let isPlus = parseInt(satu.value);
+        satu.value = isPlus + 1;
+      });
+
       article.appendChild(plusMinus);
 
       const choose = document.createElement("h4");
