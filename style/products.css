@@ -234,6 +234,8 @@ h2.product-title {
   color: #8e6447;
 }
 
+/*filter*/
+
 form.form-search {
   padding: 25px 25px;
   background-color: #0b0909;
@@ -259,6 +261,7 @@ button.reset-btn {
   background: none;
   color: #ffffff;
   margin-left: 100px;
+  cursor: pointer;
 }
 
 h5.search {
