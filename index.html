@@ -539,6 +539,8 @@
 
             const section = document.getElementById("menu");
             section.append(article);
+
+            localStorage.setItem("products", JSON.stringify(data.products));
           });
         } catch (error) {
           console.log("error :", error);

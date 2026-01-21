@@ -64,7 +64,7 @@
     </header>
 
     <section class="container-detail">
-      <div class="image-coffe">
+      <!-- <div class="image-coffe">
         <img src="../images/image 31.png" alt="" />
         <div>
           <img src="../images/image 31.png" alt="" />
@@ -131,7 +131,7 @@
             />
           </a>
         </div>
-      </article>
+      </article> -->
     </section>
 
     <section class="recommended">
@@ -357,69 +357,12 @@
     </footer>
 
     <script>
-      const product = [
-        {
-          id: 1,
-          image: {
-            imageSatu: "../images/image 27.png",
-            imageDua: "../images/image 27.png",
-            imageTiga: "../images/image 27.png",
-            imageEmpat: "../images/image 27.png",
-          },
-          name: "Hazelnut Latte",
-          description:
-            "You can explore the menu that we provide with fun and have their own taste.",
-          price: "20.000",
-          discount: "10.000",
-        },
-        {
-          id: 2,
-          image: {
-            imageSatu: "../images/image 22.png",
-            imageDua: "../images/image 22.png",
-            imageTiga: "../images/image 22.png",
-            imageEmpat: "../images/image 22.png",
-          },
-          name: "Hazelnut Latte",
-          description:
-            "You can explore the menu that we provide with fun and have their own taste.",
-          price: "20.000",
-          discount: "10.000",
-        },
-        {
-          id: 3,
-          image: {
-            imageSatu: "../images/image 30.png",
-            imageDua: "../images/image 30.png",
-            imageTiga: "../images/image 30.png",
-            imageEmpat: "../images/image 30.png",
-          },
-          name: "Hazelnut Latte",
-          description:
-            "You can explore the menu that we provide with fun and have their own taste.",
-          price: "20.000",
-          discount: "10.000",
-        },
-        {
-          id: 4,
-          image: {
-            imageSatu: "../images/image 31.png",
-            imageDua: "../images/image 31.png",
-            imageTiga: "../images/image 31.png",
-            imageEmpat: "../images/image 31.png",
-          },
-          name: "Hazelnut Latte",
-          description:
-            "You can explore the menu that we provide with fun and have their own taste.",
-          price: "20.000",
-          discount: "10.000",
-        },
-      ];
-
       const url = new URLSearchParams(window.location.search);
       const selectId = url.get("id");
 
-      const selectProduct = product.find((item) => {
+      const products = JSON.parse(localStorage.getItem("products"));
+
+      const selectProduct = products.find((item) => {
         return item.id == selectId;
       });
 
