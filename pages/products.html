@@ -691,6 +691,8 @@
       const url =
         "https://raw.githubusercontent.com/adityabastyas/koda-b6-html/refs/heads/main/data/data.json";
 
+      let productsData = [];
+
       async function getProducts() {
         try {
           const res = await fetch(url);
@@ -700,79 +702,99 @@
           }
 
           const data = await res.json();
-          const products = data.products;
+          productsData = data.products;
 
-          const container = $(".container-hazelnut");
-
-          products.forEach((item) => {
-            const article = $("<article>").addClass("menu");
-
-            const header = $("<header>").addClass("header-menu");
-            const img = $("<img>")
-              .attr("src", item.image.imageSatu)
-              .attr("alt", item.name);
-            header.append(img);
-            article.append(header);
-
-            const titleMenu = $("<div>").addClass("title-menu");
-
-            const h3 = $("<h3>").addClass("title-menu-title").text(item.name);
-            titleMenu.append(h3);
-
-            const p = $("<p>")
-              .addClass("title-menu-text")
-              .text(item.description);
-            titleMenu.append(p);
-
-            const rating = $("<div>").addClass("rating");
-            for (let i = 0; i < 5; i++) {
-              rating.append(
-                $("<img>")
-                  .addClass("start")
-                  .attr("src", "../images/icon/start.svg"),
-              );
-            }
-            rating.append($("<span>").addClass("rating-number").text("5.0"));
-            titleMenu.append(rating);
-
-            titleMenu.append(
-              $("<span>").addClass("idr-line").text(`IDR ${item.price}`),
-            );
-            titleMenu.append(
-              $("<span>").addClass("menu-price").text(`IDR ${item.discount}`),
-            );
-
-            const footer = $("<footer>").addClass("menu-footer");
-
-            const buyButton = $("<button>").addClass("menu-button");
-            const buyLink = $("<a>")
-              .attr("href", `./products-detail.html?id=${item.id}`)
-              .text("Buy");
-            buyButton.append(buyLink);
-            footer.append(buyButton);
-
-            const cartLink = $("<a>")
-              .addClass("icon-cart-shopping")
-              .attr("href", "#");
-            const cartImg = $("<img>").attr(
-              "src",
-              "../images/icon/ShoppingCart.svg",
-            );
-            cartLink.append(cartImg);
-            footer.append(cartLink);
-
-            titleMenu.append(footer);
-            article.append(titleMenu);
-
-            const flash = $("<h4>").addClass("flash-sale").text("FLASH SALE!");
-            article.append(flash);
-
-            container.append(article);
-          });
+          comeProduct(productsData);
         } catch (error) {
           console.log("error", error);
         }
       }
+
+      function comeProduct(products) {
+        const container = $(".container-hazelnut");
+        container.empty();
+
+        products.forEach((item) => {
+          const article = $("<article>").addClass("menu");
+
+          const header = $("<header>").addClass("header-menu");
+          const img = $("<img>")
+            .attr("src", item.image.imageSatu)
+            .attr("alt", item.name);
+          header.append(img);
+          article.append(header);
+
+          const titleMenu = $("<div>").addClass("title-menu");
+
+          const h3 = $("<h3>").addClass("title-menu-title").text(item.name);
+          titleMenu.append(h3);
+
+          const p = $("<p>").addClass("title-menu-text").text(item.description);
+          titleMenu.append(p);
+
+          const rating = $("<div>").addClass("rating");
+          for (let i = 0; i < 5; i++) {
+            rating.append(
+              $("<img>")
+                .addClass("start")
+                .attr("src", "../images/icon/start.svg"),
+            );
+          }
+          rating.append($("<span>").addClass("rating-number").text("5.0"));
+          titleMenu.append(rating);
+
+          titleMenu.append(
+            $("<span>").addClass("idr-line").text(`IDR ${item.price}`),
+          );
+          titleMenu.append(
+            $("<span>").addClass("menu-price").text(`IDR ${item.discount}`),
+          );
+
+          const footer = $("<footer>").addClass("menu-footer");
+
+          const buyButton = $("<button>").addClass("menu-button");
+          const buyLink = $("<a>")
+            .attr("href", `./products-detail.html?id=${item.id}`)
+            .text("Buy");
+          buyButton.append(buyLink);
+          footer.append(buyButton);
+
+          const cartLink = $("<a>")
+            .addClass("icon-cart-shopping")
+            .attr("href", "#");
+          const cartImg = $("<img>").attr(
+            "src",
+            "../images/icon/ShoppingCart.svg",
+          );
+          cartLink.append(cartImg);
+          footer.append(cartLink);
+
+          titleMenu.append(footer);
+          article.append(titleMenu);
+
+          const flash = $("<h4>").addClass("flash-sale").text("FLASH SALE!");
+          article.append(flash);
+
+          container.append(article);
+        });
+      }
+
+      $(".apply-btn").on("click", (e) => {
+        e.preventDefault();
+
+        const searchValue = $(".search-box").val().toLowerCase();
+
+        const filtered = productsData.filter((item) => {
+          return item.name.toLowerCase().includes(searchValue);
+        });
+
+        comeProduct(filtered);
+      });
+
+      $(".reset-btn").on("click", function () {
+        $(".search-box").val("");
+        comeProduct(productsData);
+      });
 
       getProducts();
     </script>
