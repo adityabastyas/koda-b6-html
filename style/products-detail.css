@@ -233,13 +233,14 @@ span.menu-price {
 
 .regular > span {
   padding: 10px 20px;
-  border: 1px solid #ff8906;
+  border: 1px solid #ebb1b1;
+  cursor: pointer;
+  color: #4f5665;
 }
 
-.regular > span:nth-child(2),
-.regular > span:nth-child(3) {
-  color: #4f5665;
-  border-color: #e8e8e8;
+.regular > span.active {
+  background-color: #ff8906;
+  color: #161111;
 }
 
 button.menu-button {

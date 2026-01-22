@@ -366,6 +366,17 @@
         return item.id == selectId;
       });
 
+      const checkout = {
+        id: selectProduct.id,
+        image: selectProduct.image.imageSatu,
+        name: selectProduct.name,
+        discount: selectProduct.discount,
+        price: selectProduct.price,
+        qty: 1,
+        size: "Regular",
+        type: "Ice",
+      };
+
       const imageCoffe = document.createElement("div");
       imageCoffe.className = "image-coffe";
       const imgSatu = document.createElement("img");
@@ -502,12 +513,14 @@
         let isMinus = parseInt(satu.value);
         if (isMinus > 1) {
           satu.value = isMinus - 1;
+          checkout.qty = parseInt(satu.value);
         }
       });
 
       plus.addEventListener("click", () => {
         let isPlus = parseInt(satu.value);
         satu.value = isPlus + 1;
+        checkout.qty = parseInt(satu.value);
       });
 
       article.appendChild(plusMinus);
@@ -520,6 +533,7 @@
       regular.className = "regular";
       const reguSpan = document.createElement("span");
       reguSpan.textContent = "Regular";
+      reguSpan.classList = "active";
       regular.appendChild(reguSpan);
 
       const medium = document.createElement("span");
@@ -531,6 +545,19 @@
       regular.appendChild(large);
       article.appendChild(regular);
 
+      regular.addEventListener("click", function (e) {
+        if (e.target.tagName !== "SPAN") return;
+
+        const spans = regular.querySelectorAll("span");
+
+        spans.forEach(function (item) {
+          item.classList.remove("active");
+        });
+
+        e.target.classList.add("active");
+        checkout.size = e.target.textContent;
+      });
+
       const choose2 = document.createElement("h4");
       choose2.className = "choose";
       choose2.textContent = "Hot/Ice?";
@@ -540,12 +567,26 @@
       regular2.className = "regular";
       const ice = document.createElement("span");
       ice.textContent = "Ice";
+      ice.classList = "active";
       regular2.appendChild(ice);
 
       const hot = document.createElement("span");
       hot.textContent = "Hot";
       regular2.appendChild(hot);
       article.appendChild(regular2);
+
+      regular2.addEventListener("click", function (e) {
+        if (e.target.tagName !== "SPAN") return;
+
+        const spans = regular2.querySelectorAll("span");
+
+        spans.forEach(function (item) {
+          item.classList.remove("active");
+        });
+
+        e.target.classList.add("active");
+        checkout.type = e.target.textContent;
+      });
 
       const containerButton = document.createElement("div");
       containerButton.className = "container-button";
@@ -556,6 +597,14 @@
       aBuy.textContent = "Buy";
       menuButton.appendChild(aBuy);
       containerButton.appendChild(menuButton);
+
+      menuButton.addEventListener("click", function () {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        cart.push(checkout);
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+      });
 
       const iconCartShopping = document.createElement("a");
       iconCartShopping.href = "./history.html";
