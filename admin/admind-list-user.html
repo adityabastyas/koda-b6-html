@@ -28,15 +28,15 @@
 
               <span>Product</span>
             </a>
-            <a
-              href="#"
-              class="flex items-center bg-[#FF8906] gap-3 px-3 py-2 text-white"
-            >
+            <a href="#" class="flex items-center gap-3 px-3 py-2 text-gray-600">
               <img src="" alt="" />
 
               <span>Order</span>
             </a>
-            <a href="#" class="flex items-center gap-3 px-3 py-2 text-gray-600">
+            <a
+              href="#"
+              class="flex items-center gap-3 px-3 py-2 bg-[#FF8906] text-white"
+            >
               <img src="" alt="" />
 
               <span>User</span>
@@ -257,6 +257,123 @@
             <button class="px-3 py-1 border rounded">Next</button>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="">
+      <div class="rounded w-[540px] p-6">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-xl font-semibold">Insert User</h2>
+          <button><img src="" alt="" /></button>
+        </div>
+
+        <form class="flex flex-col gap-4">
+          <div>
+            <label class="block text-sm mb-2">Image User</label>
+            <div class="border rounded p-4">
+              <div class="w-12 h-12 bg-gray-200 rounded mb-2"></div>
+              <button class="bg-[#FF8906] text-white px-4 py-1 rounded text-sm">
+                Upload
+              </button>
+            </div>
+          </div>
+
+          <div class="">
+            <label class="block font-semibold text-base text-[#0B132A] mb-2"
+              >Full Name</label
+            >
+            <div class="border rounded px-3 py-2 flex gap-2">
+              <img src="../images/icon/Profile.svg" alt="" />
+              <input
+                type="text"
+                placeholder="Enter Full Name"
+                class="w-full outline-none"
+              />
+            </div>
+          </div>
+
+          <div class="">
+            <label class="block font-semibold text-base text-[#0B132A] mb-2"
+              >Email</label
+            >
+            <div class="border rounded px-3 py-2 flex gap-2">
+              <img src="../images/icon/mail.svg" alt="" />
+              <input
+                type="text"
+                placeholder="Enter Your Email"
+                class="w-full outline-none"
+              />
+            </div>
+          </div>
+
+          <div class="">
+            <label class="block font-semibold text-base text-[#0B132A] mb-2"
+              >Phone</label
+            >
+            <div class="border rounded px-3 py-2 flex gap-2">
+              <img src="../images/icon/PhoneCall.svg" alt="" />
+              <input
+                type="number"
+                placeholder="Enter Your Number"
+                class="w-full outline-none"
+              />
+            </div>
+          </div>
+
+          <div class="">
+            <div class="flex justify-between">
+              <label class="block font-semibold text-base text-[#0B132A] mb-2"
+                >Password</label
+              >
+              <span class="text-[#FF8906] text-base">Set New Password</span>
+            </div>
+            <div class="border rounded px-3 py-2 flex gap-2 justify-between">
+              <div class="flex items-center gap-2">
+                <img src="../images/icon/Password.svg" alt="" />
+                <input
+                  type="password"
+                  placeholder="Enter Your Password"
+                  class="w-full outline-none"
+                />
+              </div>
+              <img src="../images/icon/EyeSlash.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="">
+            <label class="block font-semibold text-base text-[#0B132A] mb-2"
+              >Addres</label
+            >
+            <div class="border rounded px-3 py-2 flex gap-2">
+              <img src="../images/icon/Location.svg" alt="" />
+              <input
+                type="text"
+                placeholder="Enter Your Address"
+                class="w-full outline-none"
+              />
+            </div>
+          </div>
+
+          <div class="">
+            <label class="block font-semibold text-base text-[#0B132A] mb-2"
+              >Type of User</label
+            >
+            <div class="flex justify-between text-center gap-8">
+              <span
+                class="bg-[#FCFDFE] border-[#FF8906] border p-2 w-full rounded-md"
+                >Normal User</span
+              >
+              <span
+                class="bg-[#FCFDFE] border-[#E8E8E8] border p-2 w-full rounded-md"
+                >Admind</span
+              >
+            </div>
+          </div>
+
+          <button class="w-full bg-[#FF8906] text-white py-2 rounded">
+            Save Product
+          </button>
+        </form>
       </div>
     </div>
   </body>
