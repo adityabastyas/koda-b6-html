@@ -47,7 +47,7 @@
           </nav>
         </div>
       </div>
-      <div>
+      <div class="w-full">
         <div class="mb-6">
           <h1 class="text-2xl font-semibold mb-4">Order List</h1>
 
@@ -60,6 +60,10 @@
             </button>
 
             <div class="flex gap-2">
+              <select name="" id="" class="border">
+                <option value="" selected>All</option>
+                <option value="">On Progress</option>
+              </select>
               <input
                 type="text"
                 placeholder="Enter Product Name"
@@ -85,13 +89,156 @@
               </tr>
             </thead>
             <tbody>
-              <tr class="bg-[#F9FAFB]">
+              <tr class="bg-[#F9FAFB] text-center p-4 h-[60px]">
+                <td></td>
+                <td class="text-center">#12354-09893</td>
+                <td>26 January 2023</td>
+                <td>
+                  <ul class="list-disc">
+                    <li>Hazelnut Latte R 1x</li>
+                    <li>Caramel Machiato L 1x</li>
+                  </ul>
+                </td>
+                <td>
+                  <span
+                    class="p-2 text-green-500 bg-green-200 rounded-full font-semibold"
+                    >done</span
+                  >
+                </td>
+                <td>IDR 40.000</td>
                 <td class="px-4 py-3">
                   <div class="action-buttons flex gap-2">
-                    <button class="p-2">
+                    <button class="p-1 bg-[#FF8906]">
                       <img src="" alt="" />
                     </button>
-                    <button class="p-2">
+                    <button class="p-2 bg-[#FF8906]">
+                      <img src="" alt="" />
+                    </button>
+                    <button class="p-2 bg-[#FF8906]">
+                      <img src="" alt="" />
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="text-center h-[60px]">
+                <td></td>
+                <td class="text-center">#12354-09893</td>
+                <td>26 January 2023</td>
+                <td>
+                  <ul class="list-disc">
+                    <li>Hazelnut Latte R 1x</li>
+                    <li>Caramel Machiato L 1x</li>
+                  </ul>
+                </td>
+                <td>
+                  <span
+                    class="p-2 text-red-500 bg-red-200 rounded-full font-semibold"
+                    >pending</span
+                  >
+                </td>
+                <td>IDR 40.000</td>
+                <td class="px-4 py-3">
+                  <div class="action-buttons flex gap-2">
+                    <button class="p-1 bg-[#FF8906]">
+                      <img src="" alt="" />
+                    </button>
+                    <button class="p-2 bg-[#FF8906]">
+                      <img src="" alt="" />
+                    </button>
+                    <button class="p-2 bg-[#FF8906]">
+                      <img src="" alt="" />
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="text-center bg-[#F9FAFB] h-[60px]">
+                <td></td>
+                <td class="text-center">#12354-09893</td>
+                <td>26 January 2023</td>
+                <td>
+                  <ul class="list-disc">
+                    <li>Hazelnut Latte R 1x</li>
+                    <li>Caramel Machiato L 1x</li>
+                  </ul>
+                </td>
+                <td>
+                  <span
+                    class="p-2 text-orange-500 bg-orange-200 rounded-full font-semibold"
+                    >On Proges</span
+                  >
+                </td>
+                <td>IDR 40.000</td>
+                <td class="px-4 py-3">
+                  <div class="action-buttons flex gap-2">
+                    <button class="p-1 bg-[#FF8906]">
+                      <img src="" alt="" />
+                    </button>
+                    <button class="p-2 bg-[#FF8906]">
+                      <img src="" alt="" />
+                    </button>
+                    <button class="p-2 bg-[#FF8906]">
+                      <img src="" alt="" />
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="text-center h-[60px]">
+                <td></td>
+                <td class="text-center">#12354-09893</td>
+                <td>26 January 2023</td>
+                <td>
+                  <ul class="list-disc">
+                    <li>Hazelnut Latte R 1x</li>
+                    <li>Caramel Machiato L 1x</li>
+                  </ul>
+                </td>
+                <td>
+                  <span
+                    class="p-2 text-gray-500 bg-gray-200 rounded-full font-semibold"
+                    >Waiting</span
+                  >
+                </td>
+                <td>IDR 40.000</td>
+                <td class="px-4 py-3">
+                  <div class="action-buttons flex gap-2">
+                    <button class="p-1 bg-[#FF8906]">
+                      <img src="" alt="" />
+                    </button>
+                    <button class="p-2 bg-[#FF8906]">
+                      <img src="" alt="" />
+                    </button>
+                    <button class="p-2 bg-[#FF8906]">
+                      <img src="" alt="" />
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="text-center bg-[#F9FAFB] h-[60px]">
+                <td></td>
+                <td class="text-center">#12354-09893</td>
+                <td>26 January 2023</td>
+                <td>
+                  <ul class="list-disc">
+                    <li>Hazelnut Latte R 1x</li>
+                    <li>Caramel Machiato L 1x</li>
+                  </ul>
+                </td>
+                <td>
+                  <span
+                    class="p-2 text-orange-500 bg-orange-200 rounded-full font-semibold"
+                    >On Proges</span
+                  >
+                </td>
+                <td>IDR 40.000</td>
+                <td class="px-4 py-3">
+                  <div class="action-buttons flex gap-2">
+                    <button class="p-1 bg-[#FF8906]">
+                      <img src="" alt="" />
+                    </button>
+                    <button class="p-2 bg-[#FF8906]">
+                      <img src="" alt="" />
+                    </button>
+                    <button class="p-2 bg-[#FF8906]">
                       <img src="" alt="" />
                     </button>
                   </div>
