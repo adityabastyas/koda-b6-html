@@ -102,13 +102,15 @@ img.cart-icon {
   justify-content: space-between;
 }
 
-.payment > div > span:nth-child(2) {
+.payment > div > a {
   background-color: #ff8906;
   font-size: 14px;
   font-weight: 500;
   padding: 10px;
   border-radius: 6px;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 
 .article-payment {

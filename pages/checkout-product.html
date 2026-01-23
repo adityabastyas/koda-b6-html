@@ -243,6 +243,15 @@
     </footer>
 
     <script>
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      const paymentInfo = {
+        name: "",
+        email: "",
+        address: "",
+        delivery: "Dine In",
+      };
+
       const payment = $(".payment");
 
       const title = $("<h1>");
@@ -255,69 +264,81 @@
       spanOrder.text("Your Order");
       headerDiv.append(spanOrder);
 
-      const spanAdd = $("<span>");
+      const spanAdd = $("<a>");
       spanAdd.text("+ Add Menu");
+      spanAdd.attr("href", "./products.html");
       headerDiv.append(spanAdd);
 
       payment.append(headerDiv);
 
-      const article = $("<article>");
-      article.addClass("article-payment");
+      cart.forEach((item, index) => {
+        const article = $("<article>");
+        article.addClass("article-payment");
 
-      const imgDiv = $("<div>");
-      const img = $("<img>");
-      img.attr("src", "../images/image 31.png");
-      imgDiv.append(img);
+        const imgDiv = $("<div>");
+        const img = $("<img>");
+        img.attr("src", item.image);
+        imgDiv.append(img);
 
-      article.append(imgDiv);
+        article.append(imgDiv);
 
-      const flash = $("<div>");
-      flash.addClass("flash");
+        const flash = $("<div>");
+        flash.addClass("flash");
 
-      const flashSale = $("<h4>");
-      flashSale.addClass("flash-sale");
-      flashSale.text("FLASH SALE!");
-      flash.append(flashSale);
+        const flashSale = $("<h4>");
+        flashSale.addClass("flash-sale");
+        flashSale.text("FLASH SALE!");
+        flash.append(flashSale);
 
-      const titleMenu = $("<h3>");
-      titleMenu.addClass("title-menu-title");
-      titleMenu.text("Hazelnut Latte");
-      flash.append(titleMenu);
+        const titleMenu = $("<h3>");
+        titleMenu.addClass("title-menu-title");
+        titleMenu.text(item.name);
+        flash.append(titleMenu);
 
-      const varian = $("<span>");
-      varian.text("2pcs | Regular | Ice | Dine In");
-      flash.append(varian);
+        const varianContainer = $("<div>");
 
-      const priceDiv = $("<div>");
+        const spanQty = $("<span>").text(item.qty + " pcs");
+        const spanSize = $("<span>").text(item.size);
+        const spanType = $("<span>").text(item.type);
+        const spanDelivery = $("<span>").text(paymentInfo.delivery);
 
-      const oldPrice = $("<span>");
-      oldPrice.addClass("idr-line");
-      oldPrice.text("IDR 40.000");
-      priceDiv.append(oldPrice);
+        varianContainer.append(spanQty, spanSize, spanType, spanDelivery);
 
-      const newPrice = $("<span>");
-      newPrice.addClass("menu-price");
-      newPrice.text("IDR 20.000");
-      priceDiv.append(newPrice);
+        flash.append(varianContainer);
 
-      flash.append(priceDiv);
+        const priceDiv = $("<div>");
 
-      const iconWrapper = $("<div>");
-      iconWrapper.addClass("icon-x");
+        const oldPrice = $("<span>");
+        oldPrice.addClass("idr-line");
+        oldPrice.text("IDR" + item.price);
+        priceDiv.append(oldPrice);
 
-      const iconImg = $("<img>");
-      iconImg.addClass("icon-x");
-      iconImg.attr("src", "../images/icon/XCircle.svg");
+        const newPrice = $("<span>");
+        newPrice.addClass("menu-price");
+        newPrice.text("IDR" + item.discount);
+        priceDiv.append(newPrice);
 
-      iconWrapper.append(iconImg);
-      flash.append(iconWrapper);
+        flash.append(priceDiv);
 
-      article.append(flash);
+        const iconWrapper = $("<div>");
+        iconWrapper.addClass("icon-x");
 
-      payment.append(article);
+        const iconImg = $("<img>");
+        iconImg.addClass("icon-x");
+        iconImg.attr("src", "../images/icon/XCircle.svg");
 
-      iconWrapper.on("click", () => {
-        article.remove();
+        iconWrapper.append(iconImg);
+        flash.append(iconWrapper);
+
+        iconWrapper.on("click", () => {
+          const newCart = cart.filter((cartItem) => cartItem.id !== item.id);
+
+          localStorage.setItem("cart", JSON.stringify(newCart));
+          article.remove();
+        });
+
+        article.append(flash);
+        payment.append(article);
       });
 
       //total
