@@ -24,7 +24,7 @@
       <div class="logo">
         <img
           src="../images/icon/glass.svg"
-          alt="icon-coffie"
+          alt="Coffee Shop logo icon"
           class="logo-icon"
         />
         <span class="logo-text">Coffee Shop</span>
@@ -45,7 +45,7 @@
             <a href="">
               <img
                 src="../images/icon/search-icon.svg"
-                alt="search-icon"
+                alt="search icon"
                 class="search-icon"
               />
             </a>
@@ -54,7 +54,7 @@
             <a href="./checkout-product.html">
               <img
                 src="../images/icon/cart-icon.svg"
-                alt="cart-icon"
+                alt="cart icon"
                 class="cart-icon"
               />
             </a>
@@ -74,7 +74,7 @@
         <img
           class="background-coffe-content"
           src="../images/Rectangle 299.png"
-          alt="background-coffe"
+          alt="background coffe image"
         />
         <h1 class="background-title">
           We Provide Good Coffee and Healthy Meals
@@ -89,12 +89,12 @@
           <nav class="navigation">
             <img
               src="../images/icon/arrow-left.svg"
-              alt="arrow-left"
+              alt="Previous promo button"
               class="arrow-left"
             />
             <img
               src="../images/icon/arrow-right.svg"
-              alt="arrow-right"
+              alt="Next promo button"
               class="arrow-right"
             />
           </nav>
@@ -102,7 +102,10 @@
 
         <div class="container-article">
           <article class="article-happy happy">
-            <img src="../images/image 46.svg" alt="image-66" />
+            <img
+              src="../images/image 46.svg"
+              alt="Mother's Day special promo"
+            />
             <div class="article-content">
               <h3>HAPPY MOTHER’S DAY!</h3>
               <p>Get one of our favorite menu for free!</p>
@@ -110,7 +113,11 @@
             </div>
           </article>
           <article class="article-happy">
-            <img class="space" src="../images/image 46.svg" alt="image-66" />
+            <img
+              class="space"
+              src="../images/image 46.svg"
+              alt="Mother's Day special promo"
+            />
             <div class="article-content">
               <h3>HAPPY MOTHER’S DAY!</h3>
               <p>Get one of our favorite menu for free!</p>
@@ -118,7 +125,11 @@
             </div>
           </article>
           <article class="article-happy space">
-            <img class="space" src="../images/image 46.svg" alt="image-66" />
+            <img
+              class="space"
+              src="../images/image 46.svg"
+              alt="Mother's Day special promo"
+            />
             <div class="article-content">
               <h3>HAPPY MOTHER’S DAY!</h3>
               <p>Get one of our favorite menu for free!</p>
@@ -129,7 +140,7 @@
             <img
               class="happy-man"
               src="../images/image 43.svg"
-              alt="image-46"
+              alt="Man Day special free"
             />
             <div class="article-content">
               <h3>Get a cup of coffee for free on sunday morning</h3>
@@ -140,7 +151,7 @@
         <img
           class="img-grup"
           src="../images/icon/Group-1300.svg"
-          alt="icon-group"
+          alt="Promo carousel indicator dots"
         />
       </section>
 
@@ -573,7 +584,7 @@
             <span class="next"
               ><img
                 src="../images/icon/arrow-right-2.svg"
-                alt="icon-arrow-right"
+                alt="Next page navigation arrow"
             /></span>
           </div>
         </section>
@@ -583,7 +594,7 @@
     <footer class="footer">
       <section class="coffee-logo">
         <a class="nav-logo" href="#">
-          <img src="../images/icon/Frame.svg" alt="logo-coffie" />
+          <img src="../images/icon/Frame.svg" alt="Coffee Shop brand logo" />
           <span class="logo-text-coffe">Coffee Shop</span>
         </a>
 
@@ -620,13 +631,13 @@
       <section class="sosial-media">
         <h3 class="sosial-media-text">Social Media</h3>
         <a href="https://www.facebook.com/"
-          ><img src="../images/icon/icon-facebook.svg" alt="icon-facebook"
+          ><img src="../images/icon/icon-facebook.svg" alt="icon facebook"
         /></a>
         <a class="sosial-media-image" href="https://x.com/"
-          ><img src="../images/icon/icon-twitter.svg" alt="icon-twitter"
+          ><img src="../images/icon/icon-twitter.svg" alt="icon twitter"
         /></a>
         <a href="https://www.instagram.com/"
-          ><img src="../images/icon/icon-ig.svg" alt="icon-ig"
+          ><img src="../images/icon/icon-ig.svg" alt="icon ig"
         /></a>
       </section>
     </footer>
@@ -738,7 +749,8 @@
             rating.append(
               $("<img>")
                 .addClass("start")
-                .attr("src", "../images/icon/start.svg"),
+                .attr("src", "../images/icon/start.svg")
+                .attr("alt", item.name),
             );
           }
           rating.append($("<span>").addClass("rating-number").text("5.0"));
@@ -763,10 +775,9 @@
           const cartLink = $("<a>")
             .addClass("icon-cart-shopping")
             .attr("href", "./checkout-product.html");
-          const cartImg = $("<img>").attr(
-            "src",
-            "../images/icon/ShoppingCart.svg",
-          );
+          const cartImg = $("<img>")
+            .attr("src", "../images/icon/ShoppingCart.svg")
+            .attr("alt", "Add to shopping cart icon");
           cartLink.append(cartImg);
           footer.append(cartLink);
 

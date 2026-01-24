@@ -1,3 +1,6 @@
+/* selector (*) digunakan untuk reset margin dan padding di semua elemen.
+box-sizing: border-box memastikan padding dan border dihitung dalam width/height elemen */
+
 *,
 *::before,
 *::after {
@@ -6,6 +9,8 @@
   box-sizing: border-box;
 }
 
+/* header & navigation */
+/* position: sticky membuat header tetap terlihat saat scroll */
 .container-header {
   background-color: #0b0909;
   padding: 14px 130px;
@@ -32,6 +37,7 @@ div.logo {
   margin-left: 15px;
 }
 
+/* Navigation menggunakan inline-block agar  dalam satu baris */
 nav.nav-container-left {
   display: inline-block;
 }
@@ -83,12 +89,14 @@ img.cart-icon {
   margin-left: 22px;
 }
 
-/**/
+/*Main Content*/
 
 .main {
   font-family: "Plus Jakarta Sans", sans-serif;
   padding: 78px 130px 86px 130px;
 }
+
+/* title content */
 .main > div {
   display: flex;
   gap: 20px;
@@ -133,7 +141,7 @@ img.cart-icon {
   background-color: #ffffff;
 }
 
-/*calender*/
+/*seleect calender*/
 .form-group {
   display: flex;
   align-items: center;
@@ -142,7 +150,7 @@ img.cart-icon {
   padding: 0 10px;
 }
 
-/*order*/
+/*order article container*/
 
 .menu-order {
   display: flex;
@@ -195,7 +203,7 @@ img.cart-icon {
   padding: 10px;
 }
 
-/*send*/
+/*send section*/
 
 .send {
   font-family: "Plus Jakarta Sans", sans-serif;

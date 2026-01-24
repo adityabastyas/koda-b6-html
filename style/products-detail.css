@@ -1,3 +1,6 @@
+/* selector (*) digunakan untuk reset margin dan padding di semua elemen.
+box-sizing: border-box memastikan padding dan border dihitung dalam width/height elemen */
+
 *,
 *::before,
 *::after {
@@ -6,6 +9,8 @@
   box-sizing: border-box;
 }
 
+/* header & navigation */
+/* position: sticky membuat header tetap terlihat saat scroll */
 .container-header {
   background-color: #0b0909;
   padding: 14px 130px;
@@ -32,6 +37,7 @@ div.logo {
   margin-left: 15px;
 }
 
+/* Navigation menggunakan inline-block agar  dalam satu baris */
 nav.nav-container-left {
   display: inline-block;
 }
@@ -92,6 +98,7 @@ img.cart-icon {
   padding: 0 20px;
 }
 
+/* images coffe container */
 .image-coffe {
   display: flex;
   flex-direction: column;
@@ -110,12 +117,13 @@ img.cart-icon {
   gap: 12px;
 }
 
+/* image food and coffes */
 .image-coffe > div > img {
   flex: 1;
   min-width: 0;
 }
-/**/
 
+/* flash sale container */
 .article-flash {
   display: flex;
   flex-direction: column;
@@ -147,6 +155,7 @@ p.title-menu-text {
   font-size: 14px;
 }
 
+/* icon start */
 .start {
   color: #ff8c00;
   margin-right: 10px;
@@ -188,6 +197,7 @@ span.menu-price {
   cursor: pointer;
 }
 
+/* plus minus container button */
 .plus-minus {
   display: flex;
   gap: 20px;
@@ -222,6 +232,7 @@ span.menu-price {
   font-weight: 700;
 }
 
+/* container type */
 .regular {
   color: #0b0909;
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -273,7 +284,7 @@ a.icon-cart-shopping {
   vertical-align: middle;
 }
 
-/*recomendasi*/
+/*recommended container*/
 
 .recommended {
   margin-top: 55px;
@@ -519,6 +530,8 @@ h3.sosial-media-text {
   margin: 0 20px;
 }
 
+/* responsive design tablet 640px+ */
+
 @media (min-width: 640px) {
   /*container detail*/
 
@@ -565,6 +578,8 @@ h3.sosial-media-text {
     display: block;
   }
 }
+
+/* responsive design desktop 768px+ */
 
 @media (min-width: 768px) {
   .recommended {

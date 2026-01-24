@@ -1,3 +1,6 @@
+/* selector (*) digunakan untuk reset margin dan padding di semua elemen.
+box-sizing: border-box memastikan padding dan border dihitung dalam width/height elemen */
+
 *,
 *::before,
 *::after {
@@ -5,6 +8,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* header dan navogation */
+/* position: fixed membuat header tetap di atas saat scroll.
+  z-index: 20  header berada di atas elemen lain. */
 
 .container-header {
   background-color: #0b090921;
@@ -32,6 +39,7 @@ div.logo {
   margin-left: 15px;
 }
 
+/* navigation menggunakan inline-block untuk tampil  dalam satu baris */
 nav.nav-container-left {
   display: inline-block;
 }
@@ -83,8 +91,8 @@ img.cart-icon {
   margin-left: 22px;
 }
 
-/**/
-
+/*Hero section*/
+/* Float layout digunakan untuk membagi halaman menjadi 2 kolom (50%-50%). */
 .background-cover {
   width: 50%;
   background: linear-gradient(to bottom, #777c82, #0b0909);
@@ -160,6 +168,8 @@ span.start-text {
   margin-right: auto;
 }
 
+/* provide section */
+/* position: relative pada parent untuk konteks positioning child elements. */
 .provide-barista {
   width: 100%;
   position: relative;
@@ -208,7 +218,7 @@ section.content-right {
   overflow: hidden;
 }
 
-/*--container favorite--*/
+/*-- favorite section--*/
 
 section.container-favorite {
   text-align: center;
@@ -246,6 +256,8 @@ p.favorite-paragraph {
   margin-bottom: 60px;
 }
 
+/* card components */
+/* display: inline-block tampil sebaris. */
 article.menu {
   display: inline-block;
   margin-right: 20px;
@@ -325,7 +337,7 @@ a.icon-cart-shopping {
   vertical-align: middle;
 }
 
-/*--location map--*/
+/*--location section--*/
 section.location {
   text-align: center;
   background-color: #e8e8e84d;
@@ -359,7 +371,7 @@ p.location-text {
   margin-bottom: 60px;
 }
 
-/*--testimonial--*/
+/*--testimonial section--*/
 
 section.testimonial {
   width: 100%;
@@ -467,6 +479,7 @@ span.two {
 }
 
 /*--section-chat--*/
+/* position: fixed untuk element yang tetap di posisi saat scroll. */
 .sticky {
   position: fixed;
   bottom: 60px;
@@ -593,7 +606,7 @@ span.two {
   height: 100%;
 }
 
-/*--footer--*/
+/*--footer section--*/
 
 .footer.footer {
   background-color: #f8f8f8;
